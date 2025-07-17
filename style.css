@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* nav bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* left navbar */
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+    /* tn logo */
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* navbar center */
+  .navbar-center {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-center a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar-center a:hover {
+    color: #007bff;
+    
+  }
+  
+  /* RIGHT: Search Bar */
+  .navbar-right input {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* MAIN CONTENT */
+  .content {
+    padding: 50px 30px;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #eee;
+    font-size: 14px;
+    color: #555;
+  }
+  
