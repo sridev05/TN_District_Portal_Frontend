@@ -52,10 +52,10 @@
   
   .navbar-center a:hover {
     color: #007bff;
-    
+
   }
   
-  /* RIGHT: Search Bar */
+  /* Search bar */
   .navbar-right input {
     padding: 6px 12px;
     border: 1px solid #ccc;
@@ -63,7 +63,7 @@
     font-size: 14px;
   }
   
-  /* MAIN CONTENT */
+  /* main content */
   .content {
     padding: 50px 30px;
     text-align: center;
@@ -79,7 +79,7 @@
     color: #666;
   }
   
-  /* FOOTER */
+  /* down details */
   .footer {
     text-align: center;
     padding: 20px;
