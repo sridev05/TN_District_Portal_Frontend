@@ -145,19 +145,70 @@
       font-size: 14px;
       color: #555;
     }
+/* Add this at the bottom of your CSS or inside your existing media queries */
 
-    @media (max-width: 768px) {
-      .navbar-center {
-        flex-wrap: wrap;
-        gap: 10px;
-      }
+/* Fix for medium screens (up to 992px) */
+@media screen and (max-width: 992px) {
+  .navbar-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
 
-      .hero h1 {
-        font-size: 2rem;
-      }
+  .logo {
+    width: 60px;
+    height: auto;
+  }
 
-      .districts-section {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+  .navbar-center {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar-right input {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Fix for small screens (phones, up to 576px) */
+@media screen and (max-width: 576px) {
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-center a {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navbar-right input {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
