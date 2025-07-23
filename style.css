@@ -147,68 +147,71 @@
     }
 /* Add this at the bottom of your CSS or inside your existing media queries */
 
-/* Fix for medium screens (up to 992px) */
-@media screen and (max-width: 992px) {
-  .navbar-left {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .logo {
-    width: 60px;
-    height: auto;
-  }
-
-  .navbar-center {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .navbar-right {
-    width: 100%;
-    display: flex;
+/* Responsive styles for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 10px;
+    gap: 10px;
   }
 
-  .navbar-right input {
-    width: 90%;
+  .search-bar {
+    width: 300px;
+    margin: 10px auto;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    flex: 1 1 30%;
     max-width: 300px;
   }
 }
 
-/* Fix for small screens (phones, up to 576px) */
-@media screen and (max-width: 576px) {
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .logo {
-    width: 50px;
-    height: auto;
+    margin-bottom: 10px;
   }
 
-  .title {
-    font-size: 18px;
-    text-align: center;
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .hero-buttons button {
     width: 100%;
   }
 
-  .navbar-center a {
-    display: block;
-    padding: 10px 0;
-    text-align: center;
+  .card-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .navbar-right input {
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
+  .card {
+    width: 90%;
+    max-width: 350px;
   }
 }
