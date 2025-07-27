@@ -1,4 +1,3 @@
-// script.js - Comprehensive Tamil Nadu Districts Portal
 
 // 1. Array of district objects with comprehensive details
 const districts = [
