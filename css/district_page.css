@@ -351,6 +351,16 @@ body {
   border: 1px solid #e0e0e0;
 }
 
+.department-item a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+}
+
+.department-item a:hover {
+    color: lightgreen;
+}
+
 .card-title {
   color: #2d5aa0;
   font-size: 20px;
@@ -826,3 +836,5 @@ body {
 .hidden {
   display: none !important;
 }
+
+
