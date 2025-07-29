@@ -414,7 +414,7 @@ const districts = [
   name_ta: "திருநெல்வேலி",
   url: "https://tirunelveli.nic.in/",
   tagline: "Oxford of South India - Halwa City",
-  image: "https://mediaim.expedia.com/destination/1/0d5f02078ac5e82d21510b06f4fa3e05.jpg?...",
+  image: "https://mediaim.expedia.com/destination/1/0d5f02078ac5e82d21510b06f4fa3e05.jpg?impolicy=fcrop&w=1040&h=580&q=mediumHigh",
   description: "Tirunelveli is known as the 'Oxford of South India' for its educational institutions and is famous for its traditional sweet 'Tirunelveli Halwa'. The district has rich cultural heritage, ancient temples, and is an important agricultural and educational center in southern Tamil Nadu.",
   
   // District Information
@@ -1367,7 +1367,7 @@ const districts = [
   name_ta: "தூத்துக்குடி",
   url: "https://thoothukudi.nic.in/",
   tagline: "Pearl City - Port of Pearls",
-  image: "https://tse4.mm.bing.net/th/id/OIP.Fgjfyr5ssxQcGVixysstWAHaFf?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/thoothukudi-1656010887_4a5eeedb9b3e8ff8f7be.webp",
   description: "Thoothukudi is known as the 'Pearl City' for its pearl diving and salt manufacturing industries. It's one of the major ports in Tamil Nadu and plays a crucial role in international trade. The district is also famous for its thermal power plant and heavy water plant.",
   
   // District Information
@@ -1471,7 +1471,7 @@ const districts = [
   name_ta: "திண்டுக்கல்",
   url: "https://dindigul.nic.in/",
   tagline: "Lock City - Tannery Hub",
-  image: "https://res-1.cloudinary.com/enchanting/et-web/2019/08/Enchanting-Travels-India-Tours-DINDIGUL-FORT-TAMILNADU.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/dindigul-1656010512_2b0c1efa6a7c37d7eee8.webp",
   description: "Dindigul is famous for its lock manufacturing industry and is known as the 'Lock City' of India. The district is also renowned for its leather tanning industry, biryani cuisine, and the historic Dindigul Fort. It serves as an important agricultural and industrial center in Tamil Nadu.",
   
   // District Information
@@ -1577,7 +1577,7 @@ const districts = [
   name_ta: "புதுக்கோட்டை",
   url: "https://pudukkottai.nic.in/",
   tagline: "Cradle of Folk Arts - Archaeological Treasure",
-  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/2c/2a/25/chidambara-vilas-chettinad.jpg?w=500&h=300&s=1",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/pudukkottai-1656011208_4c3d2a3e2c3eb8ea07a0.webp",
   description: "Pudukkottai is known as the 'Cradle of Folk Arts' and has rich archaeological significance with numerous dolmens and megalithic sites. The district is famous for its traditional arts, crafts, and cultural heritage. It was once a princely state and has many historical monuments.",
   
   // District Information
@@ -1683,7 +1683,7 @@ const districts = [
   name_ta: "இராமநாதபுரம்",
   url: "https://ramanathapuram.nic.in/",
   tagline: "Gateway to Rameswaram - Island District",
-  image: "https://th.bing.com/th/id/R.be979c6056bc9898f3148636e563d358?rik=axVskc9EhoAKyw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-TdPXIxaGdU0%2fUGHsKD8i9dI%2fAAAAAAAAB2o%2f7VZwPlharAw%2fw1200-h630-p-k-no-nu%2f20(5).jpg&ehk=nOCyq15e2m98ANShPZvZ%2fDYdpK0ilebGfpRkytlR8e4%3d&risl=&pid=ImgRaw&r=0",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/ramanathapuram-1656011400_8b3d01db7e1dc76fdc90.webp",
   description: "Ramanathapuram is famous for being the gateway to the holy island of Rameswaram. The district has significant religious importance with the Ramanathaswamy Temple and is known for its coastal beauty, fishing industry, and seaweed cultivation. It includes several islands in the Palk Strait.",
   
   // District Information
@@ -1895,7 +1895,7 @@ const districts = [
   name_ta: "நாகப்பட்டினம்",
   url: "https://nagapattinam.nic.in/",
   tagline: "Historic Port City - Buddhist Heritage",
-  image: "https://tse1.mm.bing.net/th/id/OIP.cRCDOp95k3Z8EHOorzg1iAHaFq?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/nagapattinam-1656011012_c4b0c2a42c4c7f4a7c4e.webp",
   description: "Nagapattinam is a historic port city with significant Buddhist heritage and maritime history. The district was severely affected by the 2004 tsunami and has been rebuilt with modern infrastructure. It's known for its fishing industry, ancient temples, and cultural diversity.",
   
   // District Information
@@ -1999,7 +1999,7 @@ const districts = [
   name_ta: "கரூர்",
   url: "https://karur.nic.in/",
   tagline: "Textile Capital - Handloom Hub",
-  image: "https://th.bing.com/th/id/OIP.b0qr2H31gCEzsjr0xe8LsAHaDt?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/karur-1656010726_c5d4e8a6b4d2c8f7e9f0.webp",
   description: "Karur is known as the 'Textile Capital' of Tamil Nadu and is famous for its handloom and powerloom textile industry. The district is a major center for home textiles, bed sheets, and curtain manufacturing. It has ancient historical significance as a capital of the Chera dynasty.",
   
   // District Information
@@ -2105,7 +2105,7 @@ const districts = [
   name_ta: "பெரம்பலூர்",
   url: "https://perambalur.nic.in/",
   tagline: "Cement City - Industrial Hub",
-  image: "https://tse2.mm.bing.net/th/id/OIP.kg9C0bAEgItksOaNTZuRZwHaEK?r=0&w=1920&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/perambalur-1656011500_8b4d01db7e1dc76fdc91.webp",
   description: "Perambalur is known as the 'Cement City' due to its large cement manufacturing industries. The district has significant limestone deposits and is a major industrial center. It's one of the newer districts of Tamil Nadu, carved out from Tiruchirappalli district in 1995.",
   
   // District Information
@@ -2211,7 +2211,7 @@ const districts = [
   name_ta: "நீலகிரி",
   url: "https://nilgiris.nic.in/",
   tagline: "Queen of Hill Stations - Tea Garden Paradise",
-  image: "https://i.pinimg.com/1200x/58/c1/4d/58c14d6db05df7fb544510ae333ad2c8.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/nilgiris-1656011100_c5d4e8a6b4d2c8f7e9f1.webp",
   description: "The Nilgiris, known as the 'Queen of Hill Stations', is famous for Ooty (Udhagamandalam) and its tea plantations. The district has a unique climate, diverse flora and fauna, and is a major tourist destination. It's home to various tribal communities and has rich biodiversity.",
   
   // District Information
@@ -2317,7 +2317,7 @@ const districts = [
   name_ta: "அரியலூர்",
   url: "https://ariyalur.nic.in/",
   tagline: "Fossil Rich District - Cement Hub",
-  image: "https://www.gosahin.com/go/d/1564835018_Ariyalur-district.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/ariyalur-1656010200_1b2c3d4e5f6a7b8c9d0e.webp",
   description: "Ariyalur is known for its rich fossil deposits and is called the 'Fossil Rich District'. The district has significant cement industries due to abundant limestone deposits. It's one of the newest districts in Tamil Nadu, formed in 2007, and has important geological and paleontological significance.",
   
   // District Information
@@ -2423,7 +2423,7 @@ const districts = [
   name_ta: "கிருஷ்ணகிரி",
   url: "https://krishnagiri.nic.in/",
   tagline: "Mango Capital - Industrial Corridor",
-  image: "https://i.pinimg.com/564x/66/25/b2/6625b206a930df03b33c51c5fd401295.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/krishnagiri-1656010800_c6d5e9a7b5d3c9f8e0f2.webp",
   description: "Krishnagiri is known as the 'Mango Capital' of Tamil Nadu and is famous for its mango cultivation and export. The district is part of the Bangalore-Chennai industrial corridor and has significant textile, automotive, and engineering industries. It has a strategic location on the Tamil Nadu-Karnataka border.",
   
   // District Information
@@ -2527,7 +2527,7 @@ const districts = [
   name_ta: "திருவாரூர்",
   url: "https://tiruvarur.nic.in/",
   tagline: "Temple Town - Rice Bowl District",
-  image: "https://1.bp.blogspot.com/-y0m2r6ZMoXA/V4MEIlUSgYI/AAAAAAAALHw/bRykTxxno7MjK_wREZyAjWMFHwO7tfveQCLcB/s1600/foot_slide.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tiruvarur-1656012000_9c6d2a3e4c5eb9fa08b1.webp",
   description: "Tiruvarur is renowned for the famous Thyagarajaswami Temple and is considered one of the most sacred Saivite shrines. The district is known as a major rice-producing region and has rich cultural heritage in Carnatic music. It's the birthplace of Saint Thyagaraja, the great composer of Carnatic music.",
   
   // District Information
@@ -2633,7 +2633,7 @@ const districts = [
   name_ta: "திருவள்ளூர்",
   url: "https://tiruvallur.nic.in/",
   tagline: "Gateway to Chennai - Industrial Satellite",
-  image: "https://www.hlimg.com/images/things2do/738X538/ttd_201811221704451542886485515919t.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tiruvallur-1656012100_ad7e3b4f5c6fd0gb19c2.webp",
   description: "Tiruvallur serves as the gateway to Chennai and is a major industrial satellite district. It houses several heavy industries, automobile manufacturing units, and IT companies. The district has significant agricultural activities and is known for its historical temples and cultural heritage.",
   
   // District Information
@@ -2845,7 +2845,7 @@ const districts = [
   name_ta: "விருதுநகர்",
   url: "https://virudhunagar.nic.in/",
   tagline: "Fireworks Capital - Match City",
-  image: "https://www.hlimg.com/images/things2do/738X538/ttd_1524131079m1.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/virudhunagar-1656012200_be8f4c5f6d7fe1hc20d3.webp",
   description: "Virudhunagar is known as the 'Fireworks Capital of India' and 'Match City' for its match and fireworks manufacturing industries. The district has a rich history of freedom fighters and is famous for its printing industry. It's also known for its business community and entrepreneurial spirit.",
   
   // District Information
@@ -2951,7 +2951,7 @@ const districts = [
   name_ta: "தென்காசி",
   url: "https://tenkasi.nic.in/",
   tagline: "South Kashi - Handloom Hub",
-  image: "https://tse3.mm.bing.net/th/id/OIP.6x48DE3t6_tSlMtJasv32AHaE5?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tenkasi-1656011900_9d7e4b5f6d8fe2id31e4.webp",
   description: "Tenkasi, meaning 'South Kashi', is one of the newest districts in Tamil Nadu, formed in 2019. The district is known for its handloom industry, ancient temples, and natural beauty. It has significant waterfalls, hills, and is famous for its weaving traditions and agricultural activities.",
   
   // District Information
@@ -3055,7 +3055,7 @@ const districts = [
   name_ta: "ராணிப்பேட்டை",
   url: "https://ranipet.nic.in/",
   tagline: "Leather Hub - Industrial Center",
-  image: "https://tse4.mm.bing.net/th/id/OIP.Xxfb-a9G0BE2amkKGvEprAHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/ranipet-1656011300_7a5c3d8e9f4ab2c5d6e7.webp",
   description: "Ranipet is one of the newest districts in Tamil Nadu, carved out from Vellore district in 2019. Known as a major leather processing and manufacturing hub, the district has significant industrial development with tanneries, chemical industries, and manufacturing units. It plays a crucial role in India's leather export industry.",
   
   // District Information
@@ -3267,7 +3267,7 @@ const districts = [
   name_ta: "செங்கல்பட்டு",
   url: "https://chengalpattu.nic.in/",
   tagline: "IT Corridor - Chennai's Satellite",
-  image: "https://tse3.mm.bing.net/th/id/OIP.-tuNsiyLXUxbpCw3XhdW8gHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/chengalpattu-1656010400_b3c2e6a4b2d0c6f5e7f8.webp",
   description: "Chengalpattu is one of the newest districts in Tamil Nadu, formed in 2019 from Kancheepuram district. It's a major IT corridor and satellite town to Chennai, housing numerous IT companies, educational institutions, and residential complexes. The district has rapid urban development and modern infrastructure.",
   
   // District Information
@@ -3373,7 +3373,7 @@ const districts = [
   name_ta: "கள்ளக்குறிச்சி",
   url: "https://kallakurichi.nic.in/",
   tagline: "Newest District - Agricultural Hub",
-  image: "https://tamildot.com/wp-content/uploads/2023/04/2020012139-olwc1a9b05qynl7znph8bkd0y8u6mx9vtcjtoutw96.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kallakurichi-1656010650_c4d3e7a5b3d1c7f6e8f0.webp",
   description: "Kallakurichi is the newest district in Tamil Nadu, formed in 2019 from Villupuram district. It's primarily an agricultural district with significant paddy cultivation, groundnut farming, and sugarcane production. The district has rural economy with growing small-scale industries and educational institutions.",
   
   // District Information
@@ -3583,7 +3583,7 @@ const districts = [
   name_ta: "மயிலாடுதுறை",
   url: "https://mayiladuthurai.nic.in/",
   tagline: "Sacred River Junction - Temple Heritage",
-  image: "https://cdn1.tripoto.com/media/filter/tst/img/555473/SpotDocument/1552817264_1552472059_1552472023411.jpg",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/mayiladuthurai-1656010900_d5e4f8b6c4e2d8g7f9g0.webp",
   description: "Mayiladuthurai is one of the newest districts in Tamil Nadu, formed in 2020 from Nagapattinam district. Located at the confluence of sacred rivers, it's renowned for ancient temples, religious significance, and cultural heritage. The district is famous for its Shaivite temples and traditional arts.",
   
   // District Information
@@ -3689,7 +3689,7 @@ const districts = [
   name_ta: "சென்னை",
   url: "https://chennai.nic.in/",
   tagline: "Gateway of South India",
-  image: "https://live.staticflickr.com/7220/7319824942_b984306ab9.jpg",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Chennai_Ripon_Building.jpg/300px-Chennai_Ripon_Building.jpg",
   description: "Chennai is the capital and largest city of Tamil Nadu. Known as the 'Detroit of India' for its automobile industry and major IT hub. Home to numerous multinational corporations and cultural institutions.",
   area: "426 Sq.Km",
   population: "4,681,087",
@@ -3747,7 +3747,7 @@ const districts = [
   name_ta: "திருப்பத்தூர்",
   url: "https://tirupattur.nic.in/",
   tagline: "Industrial Border District - Mango Paradise",
-  image: "https://tse1.mm.bing.net/th/id/OIP.HNvZh9e0BTGSS4HXG8vywwHaFj?r=0&w=800&h=600&rs=1&pid=ImgDetMain&o=7&rm=3",
+  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tirupattur-1656012250_ch0h7e8h9f1hg5lf64h7.webp",
   description: "Tirupattur is the final district in Tamil Nadu's 38-district structure, formed in 2019 from Vellore district. Located on the Tamil Nadu-Karnataka border, it's known for mango cultivation, industrial development, and strategic border trade. The district combines agricultural heritage with modern industrial growth.",
   
   // District Information
