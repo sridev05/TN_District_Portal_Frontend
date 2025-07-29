@@ -1,222 +1,271 @@
-   * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+  min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
 
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-    }
-    a{
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header.navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #fff;
-      padding: 15px 30px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .navbar-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo {
-      width: 40px;
-      height: 40px;
-    }
-
-    .title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .navbar-center {
-      display: flex;
-      gap: 20px;
-    }
-
-    .navbar-center a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .navbar-center a:hover {
-      color: #28a745;
-    }
-
-    .navbar-right input {
-      padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 300px;
-    }
-
-    .hero {
-      background-image: url("https://tourismtn.com/wp-content/uploads/2021/09/Courtallam-1-1024x576.jpg");
-      background-size: cover;
-      background-position: center;
-      padding: 100px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 8px #000;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin: 15px 0;
-      text-shadow: 1px 1px 5px #000;
-    }
-
-    .hero-buttons {
-      margin-top: 20px;
-    }
-
-    .hero-buttons button {
-      background-color: #28a745;
-      border: none;
-      padding: 10px 20px;
-      color: white;
-      font-weight: 500;
-      margin: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .hero-buttons button:hover {
-      background-color: #218838;
-    }
-
-    .districts-section {
-    
-      padding: 50px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .district-card {
-      width: 260px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .district-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .district-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .district-card p {
-      text-align: center;
-      font-weight: 600;
-      padding: 12px;
-      color: #333;
-    }
-
-    footer.footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #eee;
-      font-size: 14px;
-      color: #555;
-    }
-/* Add this at the bottom of your CSS or inside your existing media queries */
-
-/* Responsive styles for tablets and smaller laptops */
-@media screen and (max-width: 1024px) {
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .search-bar {
-    width: 300px;
-    margin: 10px auto;
-  }
-
-  .card-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .card {
-    flex: 1 1 30%;
-    max-width: 300px;
-  }
+/* Navbar */
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 16px 32px;
+  box-shadow: 0 2px 10px #0001;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.navbar-left { display: flex; align-items: center; gap: 12px; }
+.logo { width: 42px; height: auto; }
+.title { font-size: 21px; font-weight: bold; color: #222; }
+.navbar-center { display: flex; gap: 18px; }
+.navbar-center a {
+  font-weight: 500;
+  color: #222;
+  padding: 4px 14px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar-center a:hover, .navbar-center a.active {
+  background: #e9fff0;
+  color: #28a745;
+}
+.navbar-right input {
+  display: block;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1.2px solid #ced4da;
+  width: 250px;
+  font-size: 15px;
+  background: #fafbfd;
+  transition: border 0.2s;
+}
+.navbar-right input:focus {
+  outline: none;
+  border-color: #28a745;
 }
 
-/* Responsive styles for mobile devices */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(40,167,69,0.15),rgba(40,167,69,0.06)), url('https://tourismtn.com/wp-content/uploads/2021/09/Courtallam-1-1024x576.jpg') center/cover no-repeat;
+  padding: 72px 16px 60px 16px;
+  text-align: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px #1a202733;
+}
+.hero p {
+  font-size: 1.13rem;
+  margin: 16px 0;
+  text-shadow: 1px 1px 5px #262b3344;
+}
+.hero-buttons { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.hero-buttons button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background .2s;
+}
+.hero-buttons button:hover { background: #218838; }
 
-  .logo {
-    margin-bottom: 10px;
-  }
+/* Districts Grid */
+.districts-section {
+  padding: 50px 10px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.districts-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.district-card {
+  background: #fff;
+  border-radius: 11px;
+  box-shadow: 0 4px 14px #0001;
+  cursor: pointer;
+  transition: box-shadow .16s, transform .11s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.district-card:hover {
+  box-shadow: 0 8px 28px #0002;
+  transform: translateY(-2px) scale(1.019);
+}
+.district-image {
+  width: 100%;
+  height: 152px;
+  object-fit: cover;
+  display: block;
+}
+.district-card p {
+  font-weight: 600;
+  font-size: 1.08em;
+  letter-spacing: .2px;
+  color: #1b2126;
+  padding: 1em .4em 1.25em .4em;
+  flex-grow: 1;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  min-height: 62px;
+}
 
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
+/* District Detail Responsive Main */
+.district-detail {
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 10px #d1e7dd22;
+  padding: 32px 24px;
+  font-size: 1.06em;
+}
+.district-header img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 14px #aaa2;
+  display: block;
+}
+.district-header h2 {
+  font-size: 2rem;
+  margin: .5em 0 .1em 0;
+  text-align: center;
+  color: #258c36;
+}
+.district-name-ta {
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 400;
+  margin-left: .25em;
+}
+.district-tagline {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: 1.08em;
+  margin-bottom: 1em;
+}
+.district-body {
+  margin: 0 auto;
+  max-width: 750px;
+}
+.district-body ul.district-stats {
+  list-style: none;
+  padding: 0;
+  margin: 1.4em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 34px;
+}
+.district-body ul.district-stats li {
+  font-size: 1em;
+  color: #254e16;
+  flex: 1 1 40%;
+}
 
-  .search-bar {
-    width: 90%;
-    margin-top: 10px;
-  }
+/* Info fields */
+.district-body b { color: #259148; }
+.collector-info {
+  background: #f7fef5;
+  padding: 16px 16px 13px 16px;
+  margin: 1.7em 0 1em 0;
+  border-left: 5px solid #28a745;
+  border-radius: 9px;
+}
+.collector-info h4 { margin-bottom: .2em; font-size: 1.07em; color: #1a4c1a; }
 
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    padding: 0 20px;
-  }
+/* Administration table/section */
+.district-body ul { margin: 8px 0 8px 0; }
+.district-body h4 { color: #257a30; font-size: 1.06em; }
 
-  .hero-buttons button {
-    width: 100%;
-  }
+/* Government Schemes Table */
+.schemes-table { margin: 1.6em 0 0 0; overflow-x: auto;}
+.schemes-table table {
+  border-collapse: collapse;
+  min-width: 450px;
+  width: 100%;
+  background: #f6fff7;
+}
+.schemes-table th,
+.schemes-table td {
+  padding: 11px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e2f3e2;
+}
+.schemes-table th {
+  background: #e5fff1;
+  color: #28a745;
+  font-size: 1em;
+  font-weight: 700;
+}
+.schemes-table tr:hover { background: #ecfaf0; }
+.schemes-table tr:nth-child(even) { background: #f7fff6; }
 
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Footer */
+footer.footer {
+  text-align: center;
+  padding: 22px 10px 10px 10px;
+  background: #e6faea;
+  color: #578067;
+  font-size: 15px;
+  letter-spacing: .1px;
+}
 
-  .card {
-    width: 90%;
-    max-width: 350px;
-  }
+/* Responsive Layouts */
+@media (max-width: 1200px) {
+  .districts-grid { grid-template-columns: repeat(3, minmax(210px, 1fr)); }
+}
+@media (max-width: 900px) {
+  .districts-grid { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
+  .district-detail { padding: 18px 7px; }
+}
+@media (max-width: 600px) {
+  header.navbar { flex-direction: column; gap: 8px; padding: 8px 7px;}
+  .navbar-center { gap: 7px; }
+  .navbar-right input { width: 94vw; max-width: 400px; }
+  .districts-section { padding: 19px 1px 5px 1px; }
+  .districts-grid { grid-template-columns: 1fr; gap: 13px;}
+  .district-card { max-width: 96vw; min-width: 145px;}
+  .district-card p { font-size: 1em;}
+  .hero { padding: 44px 6px 35px 6px; font-size: 1.02em;}
+  .hero h1 { font-size: 1.3em; }
+  .district-detail { box-shadow: none; padding: 8px 4px; }
+  .district-header h2 { font-size: 1.15em;}
+  .district-header img { max-width: 98vw; }
+  .collector-info { padding: 9px; }
+  .schemes-table th, .schemes-table td { padding: 7px 4px; font-size: .95em;}
+  .schemes-table table { min-width: 310px;}
+}
+
+/* Hide scrollbars on mobile but allow scrolling */
+@media (max-width: 700px) {
+  .schemes-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .district-detail { border-radius: 6px;}
 }
