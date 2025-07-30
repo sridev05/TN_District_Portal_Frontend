@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/district_page.css" />
   </head>
   <body>
-    <!-- Single Navbar Only -->
+
     <header class="navbar">
       <div class="navbar-left">
         <img
@@ -32,7 +32,6 @@
       </div>
     </header>
 
-    <!-- Mobile Navigation -->
     <nav class="mobile-nav" id="mobileNav">
       <a href="#" class="mobile-nav-item">Home</a>
       <a href="#" class="mobile-nav-item active">District Info</a>
@@ -41,15 +40,14 @@
       <a href="#" class="mobile-nav-item">Contact</a>
     </nav>
 
-    <!-- Banner -->
     <div class="banner"></div>
 
-    <!-- Main Content -->
+    
     <main class="main-content">
       <div class="content-left">
         <h2>Chennai Information</h2>
 
-        <!-- District Collector Information -->
+        District Collector Information
         <div class="collector-info">
           <div class="collector-header">
             <img
@@ -219,7 +217,7 @@
         </div>
       </div>
 
-      <!-- Compact Map Section -->
+      Compact Map Section
       <div class="map-section-full">
         <h3>Chennai District Map</h3>
         <div class="map-container-full">
@@ -255,7 +253,7 @@
         </div>
       </div>
 
-      <!-- District Information Cards -->
+      District Information Cards
       <div class="district-info-cards">
         <div class="info-card">
           <h3 class="card-title">District Admin Units</h3>
@@ -375,7 +373,7 @@
         </div>
       </div>
 
-      <!-- Compact Schemes Section -->
+      Compact Schemes Section
       <div class="schemes-section">
         <div class="schemes-header">
           <div class="schemes-title">Government Schemes</div>
@@ -476,7 +474,7 @@
       </div>
     </main>
 
-    <!-- Footer -->
+    Footer
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
@@ -484,5 +482,148 @@
     </footer>
 
     <script src="../js/script.js"></script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamil Nadu District Portal</title>
+    <link rel="stylesheet" href="../css/district_page.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-left">
+        <img src="https://aed.tn.gov.in/media/filer_public_thumbnails/filer_public/ea/c9/eac9c84e-a02c-4733-8a10-331dc8d1e1c3/tn_logo__eng.png__1200.0x1317.0_subsampling-2.png" alt="Tamil Nadu Logo" class="logo" />
+        <span class="title">Tamil Nadu District Portal</span>
+      </div>
+      <nav class="navbar-center">
+        <a href="../html/home.html">Home</a>
+        <a href="#" class="active">District Info</a>
+        <a href="#">Department</a>
+        <a href="#">Tourism</a>
+        <a href="#">Documents</a>
+        <a href="#">Notice</a>
+      </nav>
+      <div class="navbar-right">
+        <input type="text" id="district-search" placeholder="Search..." />
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#" class="mobile-nav-item">Home</a>
+      <a href="#" class="mobile-nav-item active">District Info</a>
+      <a href="#" class="mobile-nav-item">Tourism</a>
+      <a href="#" class="mobile-nav-item">Schemes</a>
+      <a href="#" class="mobile-nav-item">Contact</a>
+    </nav>
+    <div class="banner"></div>
+    <main class="main-content">
+      <div class="district-dynamic-container">
+        <div id="district-detail" class="district-detail"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../js/d.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const distName = localStorage.getItem('selectedDistrict');
+        const dist = (typeof districts !== "undefined" ? districts : []).find(d => d.name_en === distName);
+        const detail = document.getElementById('district-detail');
+        if (!dist) {
+          detail.innerHTML = '<p>District not found.</p>';
+          return;
+        }
+
+        // Schemes table
+        let schemesTable = '';
+        if (Array.isArray(dist.schemes) && dist.schemes.length > 0) {
+          schemesTable = `
+            <h4>Government Schemes</h4>
+            <div class="schemes-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Scheme Name</th>
+                    <th>Department</th>
+                    <th>Beneficiaries</th>
+                    <th>Budget</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${dist.schemes.map(scheme => `
+                    <tr>
+                      <td>${scheme.sno}</td>
+                      <td>${scheme.schemeName}</td>
+                      <td>${scheme.department}</td>
+                      <td>${scheme.beneficiaries}</td>
+                      <td>${scheme.budget}</td>
+                      <td>${scheme.status}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>`;
+        }
+
+        // Administration section
+        let adminSection = '';
+        if (dist.administration) {
+          adminSection = `
+            <h4>Administration</h4>
+            <ul>
+              <li><b>Zones:</b> ${dist.administration.zones}</li>
+              <li><b>Wards:</b> ${dist.administration.wards}</li>
+              <li><b>Revenue Divisions:</b> ${dist.administration.revenueDivisions}</li>
+              <li><b>Villages:</b> ${dist.administration.villages}</li>
+            </ul>
+          `;
+        }
+
+        detail.innerHTML = `
+          <div class="district-header">
+            <img src="${dist.image}" alt="${dist.name_en}" class="district-full-image"/>
+            <h2>${dist.name_en} <span class="district-name-ta">${dist.name_ta} மாவட்டம்</span></h2>
+            <p class="district-tagline">${dist.tagline || ''}</p>
+          </div>
+          <div class="district-body">
+            <p>${dist.description || ''}</p>
+            <ul class="district-stats">
+              <li><b>Area:</b> ${dist.area || ''}</li>
+              <li><b>Population:</b> ${dist.population || ''}</li>
+              <li><b>Headquarters:</b> ${dist.headquarters || ''}</li>
+              <li><b>Literacy Rate:</b> ${dist.literacy || ''}</li>
+              <li><b>Taluks:</b> ${dist.taluks || ''}</li>
+            </ul>
+            <b>Major Towns:</b> ${dist.majorTowns || ''}<br>
+            <b>Languages:</b> ${dist.languages || ''}<br>
+            <b>Major Attractions:</b> ${dist.attractions || ''}<br>
+            <b>Economy:</b> ${dist.economy || ''}<br>
+            <div class="collector-info">
+              <h4>District Collector</h4>
+              <div>
+                <b>${dist.collector?.name || ''}</b><br>
+                ${dist.collector?.designation || ''}<br>
+                📞 ${dist.collector?.phone || ''}<br>
+                📧 ${dist.collector?.email || ''}<br>
+                📍 ${dist.collector?.address || ''}
+              </div>
+            </div>
+            ${adminSection}
+            
+            ${schemesTable}
+          </div>
+        `;
+      });
+    </script>
   </body>
 </html>
