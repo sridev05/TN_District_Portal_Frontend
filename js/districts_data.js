@@ -1,6 +1,70 @@
 const districts = [
 
-  // District 1: Coimbatore
+{
+  
+  name_en: "Chennai",
+  name_ta: "சென்னை",
+  url: "https://chennai.nic.in/",
+  tagline: "Gateway of South India",
+  image: "https://live.staticflickr.com/7220/7319824942_b984306ab9.jpg",
+  description: `Chennai, originally known as Madras Patnam, was located in the province of Tondaimandalam, an area lying between Pennar river of Nellore and the Pennar river of Cuddalore. The capital of the province was Kancheepuram. Tondaimandalam was ruled in the 2nd century A.D. by Tondaiman Ilam Tiraiyan, who was a representative of the Chola family at Kanchipuram. It is believed that Ilam Tiraiyan must have subdued Kurumbas, the original inhabitants of the region and established his rule over Tondaimandalam. Subsequent to Ilam Tiraiyan, the region seemed to have been ruled by the Chola Prince Ilam Killi. The Chola occupation of Tondaimandalam was put to an end by the Andhra Satavahana incursions from the north under their King Pulumayi II. They appointed chieftains to look after the Kancheepuram region. Bappaswami, who is considered as the first Pallava to rule from Kancheepuram, was himself a chieftain at Kancheepuram under the Satavahana empire in the beginning of the 3rd century A.D. The Pallavas who had so far been merely viceroys, became independent rulers of Kancheepuram and its surrounding areas.
+
+The Pallavas held sway over this region from the beginning of the 3rd century A.D. to the closing years of the 9th century, except for the interval of some decades when the region was under Kalabharas. Pallavas were defeated by the Chola under Aditya-I by about 879 A.D., and the region was brought under Chola rule. Pandyas under Jatavarman Sundara Pandya rose to power, and the region was brought under Pandya rule by putting an end to Chola supremacy in 1264 A.D. 
+`,
+ 
+
+  area: "426 Sq.Km",
+  population: "4,681,087",
+  headquarters: "Chennai",
+  taluks: "Chennai (North), Chennai (South), Chennai (Central)",
+  majorTowns: "T. Nagar, Anna Nagar, Adyar, Velachery, OMR",
+  languages: "Tamil (Official), English, Telugu, Malayalam",
+  literacy: "90.18%",
+  attractions: "Marina Beach, Fort St. George, Kapaleeshwarar Temple, Government Museum",
+  economy: "IT Services, Automobile Manufacturing, Healthcare, Port Operations",
+  collector: {
+    name: "Thiru Rashmi Siddharth Zagade, I.A.S",
+    designation: "District Collector, Chennai",
+    phone: "+91-44-2841-9043",
+    email: "collector.chennai@tn.gov.in",
+    address: "Collectorate, Chennai - 600001"
+  },
+  administration: {
+    zones: "15 Zones",
+    wards: "200 Wards",
+    revenueDivisions: "3",
+    villages: "122"
+  },
+  schemes: [
+    {
+      sno: 1,
+      schemeName: "Tamil Pudhalvan Scheme",
+      department: "Higher Education",
+      beneficiaries: "25,000 Students",
+      budget: "₹150.5 Crores",
+      status: "ACTIVE"
+    },
+    {
+      sno: 2,
+      schemeName: "Kalaignar Magalir Urimai Thogai",
+      department: "Social Welfare",
+      beneficiaries: "1.2 Lakh Women",
+      budget: "₹2,400 Crores",
+      status: "ACTIVE"
+    },
+    {
+      sno: 3,
+      schemeName: "Chief Minister's Health Insurance",
+      department: "Health & Family Welfare",
+      beneficiaries: "50,000 Families",
+      budget: "₹800 Crores",
+      status: "ACTIVE"
+    }
+  ]
+},
+
+
+ // District 1: Coimbatore
 {
   name_en: "Coimbatore",
   name_ta: "கோயம்புத்தூர்",
@@ -1683,7 +1747,7 @@ const districts = [
   name_ta: "இராமநாதபுரம்",
   url: "https://ramanathapuram.nic.in/",
   tagline: "Gateway to Rameswaram - Island District",
-  image: "https://th.bing.com/th/id/R.be979c6056bc9898f3148636e563d358?rik=axVskc9EhoAKyw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-TdPXIxaGdU0%2fUGHsKD8i9dI%2fAAAAAAAAB2o%2f7VZwPlharAw%2fw1200-h630-p-k-no-nu%2f20(5).jpg&ehk=nOCyq15e2m98ANShPZvZ%2fDYdpK0ilebGfpRkytlR8e4%3d&risl=&pid=ImgRaw&r=0",
+  image: "https://www.incredibleindia.gov.in/en/tamil-nadu/rameswaram/pamban-bridge",
   description: "Ramanathapuram is famous for being the gateway to the holy island of Rameswaram. The district has significant religious importance with the Ramanathaswamy Temple and is known for its coastal beauty, fishing industry, and seaweed cultivation. It includes several islands in the Palk Strait.",
   
   // District Information
@@ -3156,6 +3220,7 @@ const districts = [
 },
 
 // District 32: Tiruppattur
+/*
 {
   name_en: "Tiruppattur",
   name_ta: "திருப்பத்தூர்",
@@ -3259,7 +3324,7 @@ const districts = [
       status: "ACTIVE"
     }
   ]
-},
+},*/
 
 // District 33: Chengalpattu
 {
@@ -3474,6 +3539,7 @@ const districts = [
 },
 
 // District 35: Tirupathur
+/*
 {
   name_en: "Tirupathur",
   name_ta: "திருப்பாத்தூர்",
@@ -3577,7 +3643,9 @@ const districts = [
       status: "ACTIVE"
     }
   ]
-},// District 36: Mayiladuthurai
+},
+*/
+// District 36: Mayiladuthurai
 {
   name_en: "Mayiladuthurai",
   name_ta: "மயிலாடுதுறை",
@@ -3603,6 +3671,7 @@ const districts = [
     designation: "District Collector, Mayiladuthurai",
     phone: "+91-4364-265100",
     email: "collrmyl@nic.in",
+    image:"",
     address: "District Collectorate, Mayiladuthurai - 609001"
   },
   
@@ -3684,62 +3753,6 @@ const districts = [
 },
 
 // District 37: Tirunelveli (Note: This appears to be a duplicate - let me provide Tenkasi which was missed)
-{
-  name_en: "Chennai",
-  name_ta: "சென்னை",
-  url: "https://chennai.nic.in/",
-  tagline: "Gateway of South India",
-  image: "https://live.staticflickr.com/7220/7319824942_b984306ab9.jpg",
-  description: "Chennai is the capital and largest city of Tamil Nadu. Known as the 'Detroit of India' for its automobile industry and major IT hub. Home to numerous multinational corporations and cultural institutions.",
-  area: "426 Sq.Km",
-  population: "4,681,087",
-  headquarters: "Chennai",
-  taluks: "Chennai (North), Chennai (South), Chennai (Central)",
-  majorTowns: "T. Nagar, Anna Nagar, Adyar, Velachery, OMR",
-  languages: "Tamil (Official), English, Telugu, Malayalam",
-  literacy: "90.18%",
-  attractions: "Marina Beach, Fort St. George, Kapaleeshwarar Temple, Government Museum",
-  economy: "IT Services, Automobile Manufacturing, Healthcare, Port Operations",
-  collector: {
-    name: "Thiru Rashmi Siddharth Zagade, I.A.S",
-    designation: "District Collector, Chennai",
-    phone: "+91-44-2841-9043",
-    email: "collector.chennai@tn.gov.in",
-    address: "Collectorate, Chennai - 600001"
-  },
-  administration: {
-    zones: "15 Zones",
-    wards: "200 Wards",
-    revenueDivisions: "3",
-    villages: "122"
-  },
-  schemes: [
-    {
-      sno: 1,
-      schemeName: "Tamil Pudhalvan Scheme",
-      department: "Higher Education",
-      beneficiaries: "25,000 Students",
-      budget: "₹150.5 Crores",
-      status: "ACTIVE"
-    },
-    {
-      sno: 2,
-      schemeName: "Kalaignar Magalir Urimai Thogai",
-      department: "Social Welfare",
-      beneficiaries: "1.2 Lakh Women",
-      budget: "₹2,400 Crores",
-      status: "ACTIVE"
-    },
-    {
-      sno: 3,
-      schemeName: "Chief Minister's Health Insurance",
-      department: "Health & Family Welfare",
-      beneficiaries: "50,000 Families",
-      budget: "₹800 Crores",
-      status: "ACTIVE"
-    }
-  ]
-},
 
 // District 38: Tirupattur (Corrected - this should be the final unique district)
 {
@@ -3890,7 +3903,7 @@ const workingImages = {
   "Nagapattinam": "https://tse1.mm.bing.net/th/id/OIP.cRCDOp95k3Z8EHOorzg1iAHaFq?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
   "Perambalur": "https://tse2.mm.bing.net/th/id/OIP.kg9C0bAEgItksOaNTZuRZwHaEK?r=0&w=1920&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3",
   "Pudukkottai": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/2c/2a/25/chidambara-vilas-chettinad.jpg?w=500&h=300&s=1",
-  "Ramanathapuram": "https://th.bing.com/th/id/R.be979c6056bc9898f3148636e563d358?rik=axVskc9EhoAKyw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-TdPXIxaGdU0%2fUGHsKD8i9dI%2fAAAAAAAAB2o%2f7VZwPlharAw%2fw1200-h630-p-k-no-nu%2f20(5).jpg&ehk=nOCyq15e2m98ANShPZvZ%2fDYdpK0ilebGfpRkytlR8e4%3d&risl=&pid=ImgRaw&r=0",
+  "Ramanathapuram": "https://www.incredibleindia.gov.in/en/tamil-nadu/rameswaram/pamban-bridge",
   "Ranipet": "https://tse4.mm.bing.net/th/id/OIP.Xxfb-a9G0BE2amkKGvEprAHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
   "Sivagangai": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/sivaganga-1656013801_c196928c461ae2a3c25b.webp",
   "Tenkasi": "https://tse3.mm.bing.net/th/id/OIP.6x48DE3t6_tSlMtJasv32AHaE5?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
