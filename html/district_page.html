@@ -494,6 +494,7 @@
     <title>Tamil Nadu District Portal</title>
     <link rel="stylesheet" href="../css/district_page.css" />
   </head>
+
   <body>
     <header class="navbar">
       <div class="navbar-left">
@@ -531,7 +532,7 @@
         <p>&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
       </div>
     </footer>
-    <script src="../js/d.js"></script>
+    <script src="../js/data.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const distName = localStorage.getItem('selectedDistrict');
@@ -541,7 +542,7 @@
           detail.innerHTML = '<p>District not found.</p>';
           return;
         }
-
+        // Set the page title
         // Schemes table
         let schemesTable = '';
         if (Array.isArray(dist.schemes) && dist.schemes.length > 0) {
