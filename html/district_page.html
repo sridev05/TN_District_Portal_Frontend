@@ -1,14 +1,869 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tamil Nadu District Portal</title>
-    <link rel="icon" href="https://live.staticflickr.com/2680/4477216562_b0d23d0fc2_b.jpg">
-    <link rel="stylesheet" href="../css/district_page.css" />
-  </head>
-  <body>
+    <link
+      rel="icon"
+      href="https://live.staticflickr.com/2680/4477216562_b0d23d0fc2_b.jpg"
+    />
+    <style>
+      /* Add basic styling directly here */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        line-height: 1.6;
+      }
+
+      /* Clean Navbar - Only Hover Color Change */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #333;
+        border-bottom: 1px solid #e0e0e0;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .navbar-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo {
+        height: 50px;
+        width: auto;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .navbar-center {
+        display: flex;
+        gap: 0;
+      }
+
+      .navbar-center a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        padding: 10px 20px;
+        transition: color 0.3s ease;
+        border: none;
+        background: transparent;
+        position: relative;
+      }
+
+      /* Hover Effect for ALL items including active */
+      .navbar-center a:hover {
+        color: #28a745 !important;
+      }
+
+      /* Active state - same as default, no special styling */
+      .navbar-center a.active {
+        color: #333;
+      }
+
+      .navbar-right input {
+        padding: 8px 15px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        width: 250px;
+        outline: none;
+        border-radius: 20px;
+      }
+
+      .navbar-right input:focus {
+        border-color: #2d5aa0;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: #333;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+
+      /* Banner Section */
+      .banner {
+        width: 100%;
+        height: 330px;
+        background-image: url("https://i.ytimg.com/vi/gCouE441TW4/maxresdefault.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Compact Main Content */
+      .main-content {
+        max-width: 1400px;
+        margin: 10px auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        background: #ffffff;
+      }
+
+      .content-left h2 {
+        color: #2d5aa0;
+        font-size: 28px;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .collector-info {
+        background: #ffffff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-left: 4px solid #2d5aa0;
+      }
+
+      .collector-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 15px;
+      }
+
+      .collector-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #2d5aa0;
+      }
+
+      .collector-details h3 {
+        color: #2d5aa0;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .collector-details p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 3px;
+      }
+
+      .content-text {
+        line-height: 1.8;
+        color: #444;
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 15px;
+      }
+
+      .content-text p {
+        margin-bottom: 12px;
+      }
+
+      /* Compact Map Section */
+      .map-section-full {
+        grid-column: 1 / -1;
+        margin: 15px 0;
+        padding: 0;
+        position: relative;
+        background: #ffffff;
+      }
+
+      .map-section-full h3 {
+        color: #2d5aa0;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        padding: 0 20px;
+      }
+
+      .map-container-full {
+        position: relative;
+        width: 100%;
+        height: 500px;
+      }
+
+      .google-map-full {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .map-info-overlay {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 220px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 3px solid #2d5aa0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .district-stats h4 {
+        color: #2d5aa0;
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .stat-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        padding: 5px 0;
+      }
+
+      .stat-label {
+        font-weight: 500;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .stat-value {
+        font-weight: 600;
+        color: #333;
+        font-size: 14px;
+      }
+
+      /* Right Sidebar */
+      .content-right {
+        background: #ffffff;
+        padding: 0;
+        height: fit-content;
+      }
+
+      .section-title {
+        color: #2d5aa0;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding: 15px 25px 10px 25px;
+      }
+
+      .carousel-container {
+        position: relative;
+        margin-bottom: 25px;
+        padding: 0 25px 20px 25px;
+      }
+
+      .carousel {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+        border-radius: 8px;
+      }
+
+      .carousel-slides {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+      }
+
+      .carousel-slide {
+        min-width: 100%;
+        position: relative;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 4px;
+      }
+
+      .carousel-nav:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      .carousel-prev {
+        left: 10px;
+      }
+
+      .carousel-next {
+        right: 10px;
+      }
+
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 15px;
+      }
+
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .carousel-dot.active {
+        background: #2d5aa0;
+      }
+
+      /* District Information Cards */
+      .district-info-cards {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+        padding: 0;
+      }
+
+      .info-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+      }
+
+      .department-item a {
+        text-decoration: none;
+        color: #666;
+        font-weight: 500;
+      }
+
+      .department-item a:hover {
+        color: lightgreen;
+      }
+
+      .card-title {
+        color: #2d5aa0;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #f0f0f0;
+      }
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .admin-section {
+        margin-bottom: 10px;
+      }
+
+      .section-name {
+        color: #2d5aa0;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .detail-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px 0;
+        border-bottom: 1px solid #f5f5f5;
+      }
+
+      .detail-item:last-child {
+        border-bottom: none;
+      }
+
+      .detail-label {
+        color: #666;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .detail-value {
+        color: #333;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .department-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .department-item {
+        color: #333;
+        font-size: 14px;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .department-item:last-of-type {
+        border-bottom: none;
+        margin-bottom: 10px;
+      }
+
+      .more-btn {
+        background: #8b4513;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        align-self: flex-start;
+      }
+
+      .more-btn:hover {
+        background: #654321;
+      }
+
+      /* Compact Schemes Section */
+      .schemes-section {
+        grid-column: 1 / -1;
+        margin-top: 15px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+      }
+
+      .schemes-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-bottom: 10px;
+      }
+
+      .schemes-title {
+        color: #2d5aa0;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .schemes-controls {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .table-search {
+        padding: 8px 15px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        width: 200px;
+        outline: none;
+        border-radius: 20px;
+      }
+
+      .table-search:focus {
+        border-color: #2d5aa0;
+      }
+
+      .control-btn {
+        background: #2d5aa0;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 13px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      .control-btn:hover {
+        background: #1e4a72;
+      }
+
+      .schemes-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .schemes-table th,
+      .schemes-table td {
+        padding: 12px;
+        text-align: left;
+        font-size: 14px;
+        border-bottom: 1px solid #e9ecef;
+      }
+
+      .schemes-table th {
+        background: #f8f9fa;
+        color: #2d5aa0;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .schemes-table tbody tr:hover {
+        background: #f8f9ff;
+      }
+
+      .schemes-table tbody tr:nth-child(even) {
+        background: #fafbfc;
+      }
+
+      .status-active {
+        background: #d4edda;
+        color: #155724;
+        padding: 6px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 15px;
+      }
+
+      .status-in-progress {
+        background: #d1ecf1;
+        color: #0c5460;
+        padding: 6px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 15px;
+      }
+
+      .status-progress {
+        background: #d1ecf1;
+        color: #0c5460;
+        padding: 6px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 15px;
+      }
+
+      .view-all-btn {
+        background: #2d5aa0;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 15px;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+      }
+
+      .view-all-btn:hover {
+        background: #1e4a72;
+      }
+
+      /* Footer */
+      .footer {
+        background: #e9ecef;
+        padding: 20px 0;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer p {
+        color: #666;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      /* Mobile Menu - Clean Hover Only */
+      .mobile-nav {
+        display: none;
+        background: #ffffff;
+        padding: 20px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .mobile-nav.active {
+        display: block;
+      }
+
+      .mobile-nav-item {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 12px 0;
+        font-size: 16px;
+        transition: color 0.3s ease;
+      }
+
+      .mobile-nav-item:hover {
+        color: #28a745;
+      }
+
+      .mobile-nav-item.active {
+        color: #333;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .main-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          margin: 10px;
+          padding: 15px;
+        }
+
+        .collector-header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .navbar-center a {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+
+        .navbar-right input {
+          width: 200px;
+        }
+
+        .map-info-overlay {
+          position: static;
+          width: 100%;
+          margin-top: 15px;
+        }
+
+        .map-container-full {
+          height: 400px;
+        }
+
+        .district-info-cards {
+          grid-template-columns: 1fr;
+          gap: 15px;
+          margin: 15px 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-wrap: wrap;
+          gap: 15px;
+        }
+
+        .navbar-center {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .title {
+          font-size: 16px;
+        }
+
+        .logo {
+          height: 45px;
+        }
+
+        .navbar-right input {
+          width: 150px;
+          font-size: 13px;
+        }
+
+        .banner {
+          height: 150px;
+        }
+
+        .main-content {
+          padding: 15px 10px;
+          margin: 10px;
+        }
+
+        .content-left h2 {
+          font-size: 24px;
+        }
+
+        .collector-header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .collector-image {
+          width: 100px;
+          height: 100px;
+        }
+
+        .carousel {
+          height: 150px;
+        }
+
+        .carousel-slide img {
+          height: 150px;
+        }
+
+        .schemes-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .schemes-controls {
+          width: 100%;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+
+        .table-search {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .schemes-table {
+          font-size: 12px;
+        }
+
+        .schemes-table th,
+        .schemes-table td {
+          padding: 8px 6px;
+        }
+
+        .map-container-full {
+          height: 300px;
+        }
+
+        .district-info-cards {
+          grid-template-columns: 1fr;
+          gap: 15px;
+          margin: 15px 0;
+        }
+
+        .info-card {
+          padding: 15px;
+        }
+
+        .card-title {
+          font-size: 18px;
+        }
+
+        .section-name {
+          font-size: 15px;
+        }
+
+        .detail-label,
+        .detail-value {
+          font-size: 13px;
+        }
+
+        .department-item {
+          font-size: 13px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .navbar-left {
+          gap: 10px;
+        }
+
+        .title {
+          font-size: 14px;
+        }
+
+        .main-content {
+          padding: 10px;
+          margin: 5px;
+        }
+
+        .collector-info {
+          padding: 15px;
+        }
+
+        .schemes-section {
+          padding: 15px;
+        }
+
+        .schemes-table th,
+        .schemes-table td {
+          padding: 6px 4px;
+          font-size: 11px;
+        }
+
+        .carousel {
+          height: 120px;
+        }
+
+        .carousel-slide img {
+          height: 120px;
+        }
+
+        .collector-image {
+          width: 90px;
+          height: 90px;
+        }
+
+        .map-container-full {
+          height: 250px;
+        }
+      }
+
+      .hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Single Navbar Only -->
     <header class="navbar">
       <div class="navbar-left">
         <img
@@ -32,6 +887,7 @@
       </div>
     </header>
 
+    <!-- Mobile Navigation -->
     <nav class="mobile-nav" id="mobileNav">
       <a href="#" class="mobile-nav-item">Home</a>
       <a href="#" class="mobile-nav-item active">District Info</a>
@@ -40,14 +896,15 @@
       <a href="#" class="mobile-nav-item">Contact</a>
     </nav>
 
+    <!-- Banner -->
     <div class="banner"></div>
 
-    
+    <!-- Main Content -->
     <main class="main-content">
       <div class="content-left">
-        <h2>Chennai Information</h2>
+        <h2>District Information</h2>
 
-        District Collector Information
+        <!-- District Collector Information -->
         <div class="collector-info">
           <div class="collector-header">
             <img
@@ -56,10 +913,10 @@
               class="collector-image"
             />
             <div class="collector-details">
-              <h3>Thiru Rashmi Siddharth Zagade, I.A.S</h3>
-              <p><strong>District Collector, Chennai</strong></p>
-              <p>Phone: +91-44-2841-9043</p>
-              <p>Email: collector.chennai@tn.gov.in</p>
+              <h3>District Collector</h3>
+              <p><strong>District Collector</strong></p>
+              <p>Phone: Loading...</p>
+              <p>Email: Loading...</p>
             </div>
           </div>
           <p>
@@ -71,38 +928,7 @@
         </div>
 
         <div class="content-text">
-          <p>
-            Chennai, formerly known as Madras, is the capital city of Tamil Nadu
-            and one of India's major metropolitan cities. The city serves as a
-            major cultural, economic and educational center of South India.
-            Chennai is known for its rich cultural heritage, classical music and
-            dance traditions, and is often called the "Detroit of India" due to
-            its automobile industry.
-          </p>
-
-          <p>
-            The city is also a major IT hub and houses numerous multinational
-            corporations. Chennai has a tropical wet and dry climate and is
-            located on the Coromandel Coast of the Bay of Bengal. The city is
-            well-connected by road, rail, air and sea, making it an important
-            transportation hub.
-          </p>
-
-          <p>
-            Chennai is home to several prestigious educational institutions,
-            healthcare facilities, and cultural landmarks that attract visitors
-            from around the world. The city's economy is driven by automobile
-            manufacturing, information technology, healthcare, and port-related
-            activities.
-          </p>
-
-          <p>
-            The district covers an area of 426 square kilometers and has a
-            population of over 7 million people, making it one of the most
-            densely populated districts in Tamil Nadu. The administration is
-            divided into several zones and wards for efficient governance and
-            service delivery.
-          </p>
+          <p>Loading district information...</p>
         </div>
       </div>
 
@@ -217,9 +1043,9 @@
         </div>
       </div>
 
-      Compact Map Section
+      <!-- Compact Map Section -->
       <div class="map-section-full">
-        <h3>Chennai District Map</h3>
+        <h3>District Map</h3>
         <div class="map-container-full">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497511.2313083443!2d79.9124906!3d13.0475848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1642678901234!5m2!1sen!2sin"
@@ -227,33 +1053,32 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
+          ></iframe>
           <div class="map-info-overlay">
             <div class="district-stats">
               <h4>District Information</h4>
               <div class="stat-item">
                 <span class="stat-label">Area:</span>
-                <span class="stat-value">426 sq km</span>
+                <span class="stat-value">Loading...</span>
               </div>
               <div class="stat-item">
                 <span class="stat-label">Population:</span>
-                <span class="stat-value">7+ Million</span>
+                <span class="stat-value">Loading...</span>
               </div>
               <div class="stat-item">
                 <span class="stat-label">Zones:</span>
-                <span class="stat-value">15 Zones</span>
+                <span class="stat-value">Loading...</span>
               </div>
               <div class="stat-item">
-                <span class="stat-label">Wards:</span>
-                <span class="stat-value">200 Wards</span>
+                <span class="stat-label">Villages:</span>
+                <span class="stat-value">Loading...</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      District Information Cards
+      <!-- District Information Cards -->
       <div class="district-info-cards">
         <div class="info-card">
           <h3 class="card-title">District Admin Units</h3>
@@ -262,15 +1087,15 @@
               <h4 class="section-name">Revenue</h4>
               <div class="detail-item">
                 <span class="detail-label">Division:</span>
-                <span class="detail-value">3</span>
+                <span class="detail-value">Loading...</span>
               </div>
               <div class="detail-item">
                 <span class="detail-label">Taluks:</span>
-                <span class="detail-value">16</span>
+                <span class="detail-value">Loading...</span>
               </div>
               <div class="detail-item">
                 <span class="detail-label">Villages:</span>
-                <span class="detail-value">122</span>
+                <span class="detail-value">Loading...</span>
               </div>
             </div>
 
@@ -278,15 +1103,15 @@
               <h4 class="section-name">Local Bodies</h4>
               <div class="detail-item">
                 <span class="detail-label">Corporation:</span>
-                <span class="detail-value">1</span>
+                <span class="detail-value">Loading...</span>
               </div>
               <div class="detail-item">
                 <span class="detail-label">Zones:</span>
-                <span class="detail-value">15</span>
+                <span class="detail-value">Loading...</span>
               </div>
               <div class="detail-item">
                 <span class="detail-label">Wards:</span>
-                <span class="detail-value">200</span>
+                <span class="detail-value">Loading...</span>
               </div>
             </div>
 
@@ -294,11 +1119,11 @@
               <h4 class="section-name">Constituencies</h4>
               <div class="detail-item">
                 <span class="detail-label">Assembly:</span>
-                <span class="detail-value">16</span>
+                <span class="detail-value">Loading...</span>
               </div>
               <div class="detail-item">
                 <span class="detail-label">Lok Sabha:</span>
-                <span class="detail-value">3</span>
+                <span class="detail-value">Loading...</span>
               </div>
             </div>
           </div>
@@ -311,11 +1136,11 @@
               <h4 class="section-name">General:</h4>
               <div class="detail-item">
                 <span class="detail-label">District:</span>
-                <span class="detail-value">Chennai</span>
+                <span class="detail-value">Loading...</span>
               </div>
               <div class="detail-item">
                 <span class="detail-label">HeadQuarters:</span>
-                <span class="detail-value">Chennai</span>
+                <span class="detail-value">Loading...</span>
               </div>
               <div class="detail-item">
                 <span class="detail-label">State:</span>
@@ -327,7 +1152,7 @@
               <h4 class="section-name">Area:</h4>
               <div class="detail-item">
                 <span class="detail-label">Total:</span>
-                <span class="detail-value">426 Sq.Kms</span>
+                <span class="detail-value">Loading...</span>
               </div>
             </div>
 
@@ -335,19 +1160,11 @@
               <h4 class="section-name">Population:</h4>
               <div class="detail-item">
                 <span class="detail-label">Total:</span>
-                <span class="detail-value">67,48,026</span>
+                <span class="detail-value">Loading...</span>
               </div>
               <div class="detail-item">
-                <span class="detail-label">Male:</span>
-                <span class="detail-value">33,31,478</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">Female:</span>
-                <span class="detail-value">34,14,827</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">Transgender:</span>
-                <span class="detail-value">1,721</span>
+                <span class="detail-label">Literacy:</span>
+                <span class="detail-value">Loading...</span>
               </div>
             </div>
           </div>
@@ -373,7 +1190,7 @@
         </div>
       </div>
 
-      Compact Schemes Section
+      <!-- Compact Schemes Section -->
       <div class="schemes-section">
         <div class="schemes-header">
           <div class="schemes-title">Government Schemes</div>
@@ -404,68 +1221,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>Tamil Pudhalvan Scheme</td>
-              <td>Higher Education</td>
-              <td>25,000 Students</td>
-              <td>150.5</td>
-              <td><span class="status-active">ACTIVE</span></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Kalaignar Magalir Urimai Thogai</td>
-              <td>Social Welfare</td>
-              <td>1.2 Lakh Women</td>
-              <td>2,400</td>
-              <td><span class="status-active">ACTIVE</span></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Chief Minister's Health Insurance</td>
-              <td>Health & Family Welfare</td>
-              <td>50,000 Families</td>
-              <td>800</td>
-              <td><span class="status-active">ACTIVE</span></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Samathuvapuram Housing Scheme</td>
-              <td>Housing & Urban Development</td>
-              <td>5,000 Families</td>
-              <td>500</td>
-              <td><span class="status-progress">IN PROGRESS</span></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Kalaignar Urban Employment Scheme</td>
-              <td>Municipal Administration</td>
-              <td>15,000 Workers</td>
-              <td>300</td>
-              <td><span class="status-active">ACTIVE</span></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Free Laptop Distribution</td>
-              <td>School Education</td>
-              <td>80,000 Students</td>
-              <td>400</td>
-              <td><span class="status-active">ACTIVE</span></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Amma Unavagam</td>
-              <td>Food & Civil Supplies</td>
-              <td>2 Lakh People</td>
-              <td>200</td>
-              <td><span class="status-active">ACTIVE</span></td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Kalaignar Insurance Scheme</td>
-              <td>Labour & Employment</td>
-              <td>30,000 Workers</td>
-              <td>100</td>
-              <td><span class="status-active">ACTIVE</span></td>
+              <td colspan="6" style="text-align: center; padding: 20px;">Loading schemes...</td>
             </tr>
           </tbody>
         </table>
@@ -474,156 +1230,183 @@
       </div>
     </main>
 
-    Footer
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- Include the districts data and district render scripts -->
+    <script src="../js/districts_data.js"></script>
+    <script src="../js/district_render.js"></script>
     <script src="../js/script.js"></script>
-  </body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tamil Nadu District Portal</title>
-    <link rel="stylesheet" href="../css/district_page.css" />
-  </head>
-  <body>
-    <header class="navbar">
-      <div class="navbar-left">
-        <img src="https://aed.tn.gov.in/media/filer_public_thumbnails/filer_public/ea/c9/eac9c84e-a02c-4733-8a10-331dc8d1e1c3/tn_logo__eng.png__1200.0x1317.0_subsampling-2.png" alt="Tamil Nadu Logo" class="logo" />
-        <span class="title">Tamil Nadu District Portal</span>
-      </div>
-      <nav class="navbar-center">
-        <a href="../html/home.html">Home</a>
-        <a href="#" class="active">District Info</a>
-        <a href="#">Department</a>
-        <a href="#">Tourism</a>
-        <a href="#">Documents</a>
-        <a href="#">Notice</a>
-      </nav>
-      <div class="navbar-right">
-        <input type="text" id="district-search" placeholder="Search..." />
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-      </div>
-    </header>
-    <nav class="mobile-nav" id="mobileNav">
-      <a href="#" class="mobile-nav-item">Home</a>
-      <a href="#" class="mobile-nav-item active">District Info</a>
-      <a href="#" class="mobile-nav-item">Tourism</a>
-      <a href="#" class="mobile-nav-item">Schemes</a>
-      <a href="#" class="mobile-nav-item">Contact</a>
-    </nav>
-    <div class="banner"></div>
-    <main class="main-content">
-      <div class="district-dynamic-container">
-        <div id="district-detail" class="district-detail"></div>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <p>&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
-      </div>
-    </footer>
-    <script src="../js/d.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const distName = localStorage.getItem('selectedDistrict');
-        const dist = (typeof districts !== "undefined" ? districts : []).find(d => d.name_en === distName);
-        const detail = document.getElementById('district-detail');
-        if (!dist) {
-          detail.innerHTML = '<p>District not found.</p>';
-          return;
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const mobileNav = document.getElementById("mobileNav");
+        mobileNav.classList.toggle("active");
+      }
+
+      // Carousel Functionality
+      const carousels = {};
+
+      function initCarousel(carouselId) {
+        const carousel = document.getElementById(carouselId);
+        const slides = carousel.querySelector(".carousel-slides");
+        const slideCount = slides.children.length;
+
+        carousels[carouselId] = {
+          currentSlide: 0,
+          slideCount: slideCount,
+          slides: slides,
+        };
+
+        // Create circular dots
+        const dotsContainer = document.getElementById(
+          carouselId.replace("Carousel", "Dots")
+        );
+        for (let i = 0; i < slideCount; i++) {
+          const dot = document.createElement("div");
+          dot.className = "carousel-dot";
+          if (i === 0) dot.classList.add("active");
+          dot.onclick = () => goToSlide(carouselId, i);
+          dotsContainer.appendChild(dot);
         }
 
-        // Schemes table
-        let schemesTable = '';
-        if (Array.isArray(dist.schemes) && dist.schemes.length > 0) {
-          schemesTable = `
-            <h4>Government Schemes</h4>
-            <div class="schemes-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>S.No</th>
-                    <th>Scheme Name</th>
-                    <th>Department</th>
-                    <th>Beneficiaries</th>
-                    <th>Budget</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${dist.schemes.map(scheme => `
-                    <tr>
-                      <td>${scheme.sno}</td>
-                      <td>${scheme.schemeName}</td>
-                      <td>${scheme.department}</td>
-                      <td>${scheme.beneficiaries}</td>
-                      <td>${scheme.budget}</td>
-                      <td>${scheme.status}</td>
-                    </tr>
-                  `).join('')}
-                </tbody>
-              </table>
-            </div>`;
-        }
+        // Auto-slide every 4 seconds
+        setInterval(() => {
+          nextSlide(carouselId);
+        }, 4000);
+      }
 
-        // Administration section
-        let adminSection = '';
-        if (dist.administration) {
-          adminSection = `
-            <h4>Administration</h4>
-            <ul>
-              <li><b>Zones:</b> ${dist.administration.zones}</li>
-              <li><b>Wards:</b> ${dist.administration.wards}</li>
-              <li><b>Revenue Divisions:</b> ${dist.administration.revenueDivisions}</li>
-              <li><b>Villages:</b> ${dist.administration.villages}</li>
-            </ul>
-          `;
-        }
+      function nextSlide(carouselId) {
+        const carousel = carousels[carouselId];
+        carousel.currentSlide = (carousel.currentSlide + 1) % carousel.slideCount;
+        updateCarousel(carouselId);
+      }
 
-        detail.innerHTML = `
-          <div class="district-header">
-            <img src="${dist.image}" alt="${dist.name_en}" class="district-full-image"/>
-            <h2>${dist.name_en} <span class="district-name-ta">${dist.name_ta} மாவட்டம்</span></h2>
-            <p class="district-tagline">${dist.tagline || ''}</p>
-          </div>
-          <div class="district-body">
-            <p>${dist.description || ''}</p>
-            <ul class="district-stats">
-              <li><b>Area:</b> ${dist.area || ''}</li>
-              <li><b>Population:</b> ${dist.population || ''}</li>
-              <li><b>Headquarters:</b> ${dist.headquarters || ''}</li>
-              <li><b>Literacy Rate:</b> ${dist.literacy || ''}</li>
-              <li><b>Taluks:</b> ${dist.taluks || ''}</li>
-            </ul>
-            <b>Major Towns:</b> ${dist.majorTowns || ''}<br>
-            <b>Languages:</b> ${dist.languages || ''}<br>
-            <b>Major Attractions:</b> ${dist.attractions || ''}<br>
-            <b>Economy:</b> ${dist.economy || ''}<br>
-            <div class="collector-info">
-              <h4>District Collector</h4>
-              <div>
-                <b>${dist.collector?.name || ''}</b><br>
-                ${dist.collector?.designation || ''}<br>
-                📞 ${dist.collector?.phone || ''}<br>
-                📧 ${dist.collector?.email || ''}<br>
-                📍 ${dist.collector?.address || ''}
-              </div>
-            </div>
-            ${adminSection}
-            
-            ${schemesTable}
-          </div>
-        `;
+      function prevSlide(carouselId) {
+        const carousel = carousels[carouselId];
+        carousel.currentSlide =
+          (carousel.currentSlide - 1 + carousel.slideCount) % carousel.slideCount;
+        updateCarousel(carouselId);
+      }
+
+      function goToSlide(carouselId, slideIndex) {
+        carousels[carouselId].currentSlide = slideIndex;
+        updateCarousel(carouselId);
+      }
+
+      function updateCarousel(carouselId) {
+        const carousel = carousels[carouselId];
+        const translateX = -carousel.currentSlide * 100;
+        carousel.slides.style.transform = `translateX(${translateX}%)`;
+
+        // Update circular dots
+        const dotsContainer = document.getElementById(
+          carouselId.replace("Carousel", "Dots")
+        );
+        const dots = dotsContainer.children;
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].classList.toggle(i === carousel.currentSlide, true);
+          dots[i].classList.toggle("active", i === carousel.currentSlide);
+        }
+      }
+
+      // Table Search Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("tableSearch");
+        if (searchInput) {
+          searchInput.addEventListener("input", function () {
+            const searchTerm = this.value.toLowerCase();
+            const table = document.getElementById("schemesTable");
+            const rows = table
+              .getElementsByTagName("tbody")[0]
+              .getElementsByTagName("tr");
+
+            for (let i = 0; i < rows.length; i++) {
+              const row = rows[i];
+              const cells = row.getElementsByTagName("td");
+              let found = false;
+
+              for (let j = 0; j < cells.length; j++) {
+                if (cells[j].textContent.toLowerCase().includes(searchTerm)) {
+                  found = true;
+                  break;
+                }
+              }
+
+              row.style.display = found ? "" : "none";
+            }
+          });
+        }
       });
+
+      // Export to Excel Functionality (CSV)
+      function exportToExcel() {
+        const table = document.getElementById("schemesTable");
+        const rows = [];
+
+        // Get headers
+        const headers = [];
+        const headerCells = table.getElementsByTagName("th");
+        for (let i = 0; i < headerCells.length; i++) {
+          headers.push(headerCells[i].textContent);
+        }
+        rows.push(headers);
+
+        // Get visible rows
+        const bodyRows = table
+          .getElementsByTagName("tbody")[0]
+          .getElementsByTagName("tr");
+        for (let i = 0; i < bodyRows.length; i++) {
+          if (bodyRows[i].style.display !== "none") {
+            const row = [];
+            const cells = bodyRows[i].getElementsByTagName("td");
+            for (let j = 0; j < cells.length; j++) {
+              row.push(cells[j].textContent);
+            }
+            rows.push(row);
+          }
+        }
+
+        // Create CSV content
+        const csvContent = rows.map((row) => row.join(",")).join("\n");
+
+        // Download file
+        const blob = new Blob([csvContent], { type: "text/csv" });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "government_schemes.csv";
+        a.click();
+        window.URL.revokeObjectURL(url);
+      }
+
+      // Print Table Functionality
+      function printTable() {
+        const table = document.getElementById("schemesTable").outerHTML;
+        const printWindow = window.open("", "_blank");
+        printWindow.document.write(`
+            <html>
+                <head>
+                    <title>Government Schemes - Tamil Nadu Districts Portal</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 20px; }
+                        table { width: 100%; border-collapse: collapse; }
+                        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                        th { background-color: #f2f2f2; }
+                        h1 { color: #2d5aa0; text-align: center; }
+                    </title>
+                </head>
+                <body>
+                    <h1>Government Schemes - ${localStorage.getItem('selectedDistrict') || 'District'}</h1>
+                    ${table}
+                </body>
+            </html>
+        `);
+        
     </script>
   </body>
 </html>
