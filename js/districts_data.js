@@ -1751,6 +1751,8 @@ description: [
   attractions: "Dindigul Fort, Palani Murugan Temple, Kodaikanal Hill Station, Sirumalai Hills, Thadikombu Perumal Temple, Bear Shola Falls, Silver Cascade Falls",
   economy: "Lock Manufacturing, Leather Tanning, Agriculture, Tourism, Handloom Textiles, Granite Quarrying, Spice Processing",
   
+
+  
   // District Collector Information
   collector: {
     name: "Tmt. M.N. Poongodi, I.A.S",
