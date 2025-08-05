@@ -1,0 +1,157 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <h>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamil Nadu District Portal</title>
+    <link
+      rel="icon"
+      href="https://live.staticflickr.com/2680/4477216562_b0d23d0fc2_b.jpg"
+    />
+     <link rel="stylesheet" href="../css/district_page.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     
+    }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      line-height: 1.8;
+
+    }
+
+    header {
+      background: white;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h2 {
+      font-size: 22px;
+      color: #1b3a5d;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .container {
+      padding: 30px 40px;
+      max-width: 100%;
+      background: white;
+      /* margin: 20px auto; */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      /* border-radius: 10px; */
+      
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      /* margin-bottom: 20px; */
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: justify;
+      /* margin-bottom: 18px; */
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+        margin: 10px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 10px 10px 0 0;
+        display: inline-block;
+      }
+    }
+  </style>
+ 
+ <body>
+    <!-- Single Navbar Only -->
+    <header class="navbar">
+      <div class="navbar-left">
+        <img
+          src="https://aed.tn.gov.in/media/filer_public_thumbnails/filer_public/ea/c9/eac9c84e-a02c-4733-8a10-331dc8d1e1c3/tn_logo__eng.png__1200.0x1317.0_subsampling-2.png"
+          alt="Tamil Nadu Logo"
+          class="logo"
+        />
+        <span class="title">Tamil Nadu District Portal</span>
+      </div>
+      <nav class="navbar-center">
+        <a href="../html/home.html">Home</a>
+        <a href="#" class="active">District Info</a>
+        <a href="#">Department</a>
+        <a href="#">Tourism</a>
+        <a href="#">Documents</a>
+        <a href="#">Notice</a>
+      </nav>
+      <div class="navbar-right">
+        <input type="text" placeholder="Search..." />
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <!-- <nav class="mobile-nav" id="mobileNav">
+      <a href="#" class="mobile-nav-item">Home</a>
+      <a href="#" class="mobile-nav-item active">District Info</a>
+      <a href="#" class="mobile-nav-item">Tourism</a>
+      <a href="#" class="mobile-nav-item">Schemes</a>
+      <a href="#" class="mobile-nav-item">Contact</a>
+    </nav> -->
+
+
+<div class="container">
+    <h1>History</h1>
+    <p>
+      Chennai, originally known as Madras Patnam, was located in the province of Tondaimandalam, an area lying between Pennar river of Nellore and the Pennar river of Cuddalore. The capital of the province was Kancheepuram. Tondaimandalam was ruled in the 2nd century A.D. by Tondaiman Ilam Tiraiyan, who was a representative of the Chola family at Kanchipuram. It is believed that Ilam Tiraiyan must have subdued Kurumbas, the original inhabitants of the region and established his rule over Tondaimandalam. Subsequent to Ilam Tiraiyan, the region seemed to have been ruled by the Chola Prince Ilam Killi. The Chola occupation of Tondaimandalam was put to an end by the Andhra Satavahana incursions from the north under their King Pulumayi II. They appointed chieftains to look after the Kancheepuram region. Bappaswami, who is considered as the first Pallava to rule from Kancheepuram, was himself a chieftain (of the tract round) at Kancheepuram under the Satavahana empire in the beginning of the 3rd century A.D., The Pallavas who had so far been merely viceroys, became independent rulers of Kancheepuram and its surrounding areas.
+    </p>
+<br>
+    <p>
+      Pallavas held sway over this region from the beginning of the 3rd century A.D. to the closing years of the 9th century except for the interval of some decades when the region was under Kalabaharas. Pallavas were defeated by the Chola under Aditya-I by about 879 A.D. and the region was brought under Chola rule. Pandyas under Jatavarman Sundara Pandya rose to power and the region was brought under Pandya rule by putting an end to Chola supremacy in 1264 A.D. Pandya’s rule over this region lasted a little over half a century followed by Bahmini kingdom with the extension of Delhi Sultanate under Khilji dynasty especially under the rule of Alauddin Khilji, a pioneer of all revenue works. During 1361, Kumara Kampana II, the son of Vijayanagar King, Bukka I conquered and established Vijayanagar rule in Tondaimandalam.
+    </p>
+<br>
+    <p>
+      The Vijayanagar rulers appointed chieftain known as Nayaks who ruled over the different regions of the province almost independently. Damarla Venkatapathy Nayak, an influential chieftain under Venkata III, who was in-charge of the area of present Chennai city, gave the grant of a piece of land lying between the river Cooum almost at the point it enters the sea and another river known as Egmore river to the English in 1639. On this piece of waste land was founded the Fort St. George exactly for business considerations. In honour of Chennappa Nayak, father of Venkatapathy Nayak, who controlled the entire coastal country from Pulicat in the north to the Portuguese settlement of Santhome, the settlement which had grown up around Fort St. George was named after Chennapatanam.
+    </p>
+<br>
+    <p>
+      The older area called the Madraspatnam lay to the north of it. Later on, the intervening space between the older northern site of Madraspatnam came to be quickly built over with houses of the new settlers (as the two expanded) and that the two villages became virtually one town. While the official centre of the settlement was designated Fort St. George, the British applied the name Madras Patnam to the combined town. Golkonda forces under General Mir Jumla conquered Madras in 1646 and brought Chennai and its immediate surroundings under his control. On the fall of Golkonda in 1687, the region came under the rule of the Mughal Emperors of Delhi.
+    </p>
+<br>
+    <p>
+      Firmans were issued by the Mughal Emperor granting the rights of English company in Chennai. In the later part of the seventeenth century, Chennai steadily progressed during the period of Agency and under many Governors. During the regime of Governor Elihi Yale (1687-92), the most important event was the formation of the institution of a mayor and Corporation for the city of Chennai. In 1693, a perwanna was received from the local Nawab granting the towns Tondiarpet, Purasawalkam and Egmore to the company. Thomas Pitt became the Governor of Chennai in 1698 and governed for eleven years. This period witnessed remarkable development of trade and increase in wealth.
+    </p>
+  </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html> 
