@@ -196,6 +196,7 @@ description: [
     designation: "District Collector, Madurai",
     phone: "+91-452-2531110",
     email: "collrmdu@nic.in",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGElGP8Ca5gl4vykI5BQSku-S7sEfc7JUu6lnMRvqCop-jvD4g&s",
     address: "Collectorate Madurai - 625001"
   },
   
@@ -288,6 +289,7 @@ description: [
     designation: "District Collector, Salem",
     phone: "+91-427-2450301",
     email: "collrslm@nic.in",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXkWConuZapx2kzmYHZi5W48kpzOwtF2Fz-xSkEKBF0Bq2NK1oodZsqrp1WlTYplAuQkY&usqp=CAU",
     address: "Collectorate, Salem - 636007"
   },
   
@@ -369,6 +371,7 @@ description: [
     designation: "District Collector, Tiruchirappalli",
     phone: "+91-431-2415031",
     email: "collrtry@nic.in",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRdufHzLGPAMAXdWydE1tlSUJb8pvOYuAqxiyMKTnA4SNj8TGfe7c2UsoL2CUvct-jGnC-lmFDg7Hd0SruRFLbRgcFn6hABI3xXXut590WoKLIXnjUF_omUVeCIObsqnTz-6NadRD4Mfo/s1600/1655392807655967-0.png",
     address: "District Collectorate, Tiruchirappalli - 620001"
   },
   
@@ -465,6 +468,7 @@ description: [
     designation: "District Collector, Thanjavur",
     phone: "+91-4362-230102",
     email: "collrtnj@nic.in",
+    image: "https://im.indiatimes.in/content/2024/Oct/tanjore-dc-linkedin_66ffc36bab03b.jpg?w=1200&h=900&cc=1&webp=1&q=75",
     address: "New Collector Office, Thanjavur - 613010"
   },
   
@@ -558,6 +562,7 @@ description: [
     designation: "District Collector, Tirunelveli",
     phone: "+91-462-2501100",
     email: "collrtvl@nic.in",
+    image : "https://media.assettype.com/thenewsminute%2Fimport%2Fsites%2Fdefault%2Ffiles%2FTveli_collector.jpg?w=480&auto=format%2Ccompress&fit=max",
     address: "District Collectorate, Tirunelveli - 627001"
   },
   
@@ -677,6 +682,7 @@ description: [
     designation: "District Collector, Vellore",
     phone: "+91-416-2274387",
     email: "collrvlr@nic.in",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0kSqSUq2s5L4UToU-aatG_w8sobEts4cuSA&s",
     address: "District Collectorate, Vellore - 632004"
   },
   
@@ -800,6 +806,7 @@ description: [
     designation: "District Collector, Erode",
     phone: "+91-424-2240601",
     email: "collrerd@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/wiu3q5/article69745456.ece/alternates/FREE_1200/Erode%20Collector%201.JPG",
     address: "District Collectorate, Erode - 638001"
   },
   
@@ -920,6 +927,7 @@ description: [
     designation: "District Collector, Kanyakumari",
     phone: "+91-4652-232123",
     email: "collrknk@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/s0o9g4/article68429307.ece/alternates/FREE_1200/9865_21_7_2024_16_59_26_1_IMG_20240721_WA0031.JPG",
     address: "District Collectorate, Nagercoil - 629001"
   },
   
@@ -1040,6 +1048,7 @@ description: [
     designation: "District Collector, Namakkal",
     phone: "+91-4286-220210",
     email: "collrnkl@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/fiuvel/article69745317.ece/alternates/FREE_1200/9868_27_6_2025_15_35_30_1_COLLECTOR_NAMAKKAL_1.JPG",
     address: "District Collectorate, Namakkal - 637001"
   },
   
@@ -1159,6 +1168,7 @@ description: [
     designation: "District Collector, Dharmapuri",
     phone: "+91-4342-268126",
     email: "collrdpi@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/va5fb2/article65533620.ece/alternates/FREE_1200/Shanthi.jpg",
     address: "District Collectorate, Dharmapuri - 636701"
   },
   
@@ -1279,6 +1289,7 @@ description: [
     designation: "District Collector, Theni",
     phone: "+91-4546-261300",
     email: "collrtni@nic.in",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NXNYIGjcRuL_wRBgR0h4GscqXZQjxMJD5g&s",
     address: "District Collectorate, Theni - 625531"
   },
   
@@ -1400,6 +1411,7 @@ description: [
     designation: "District Collector, Cuddalore",
     phone: "+91-4142-230550",
     email: "collrcud@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/7t1jqj/article68422588.ece/alternates/FREE_1200/2786_19_7_2024_17_21_38_1_IMG_20240719_WA0023.JPG",
     address: "District Collectorate, Cuddalore - 607001"
   },
   
@@ -1519,6 +1531,7 @@ description: [
     designation: "District Collector, Villupuram",
     phone: "+91-4146-222346",
     email: "collrvpm@nic.in",
+    image: "https://th-i.thgim.com/public/news/national/tamil-nadu/8xr8vg/article69185002.ece/alternates/FREE_1200/05.02.2025%20-%201A.jpg",
     address: "District Collectorate, Villupuram - 605602"
   },
   
@@ -1639,6 +1652,7 @@ description: [
     designation: "District Collector, Thoothukudi",
     phone: "+91-461-2350004",
     email: "collrtut@nic.in",
+    image: "https://images.deccanchronicle.com/dc-Cover-n7amv0ua5c5aq1hlqcg4rslmq0-20170818013113.Medi.jpeg",
     address: "District Collectorate, Thoothukudi - 628002"
   },
   
@@ -1759,6 +1773,7 @@ description: [
     designation: "District Collector, Dindigul",
     phone: "+91-451-2420652",
     email: "collrdgl@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/rq816b/article66881510.ece/alternates/LANDSCAPE_1200/10216_22_5_2023_9_53_25_1_22_05_2023_NEW_COLLECTOR.JPEG",
     address: "District Collectorate, Dindigul - 624001"
   },
   
@@ -1865,6 +1880,7 @@ description: [
     designation: "District Collector, Pudukkottai",
     phone: "+91-4322-221224",
     email: "collrpdk@nic.in",
+    image: "https://th-i.thgim.com/public/news/cities/Tiruchirapalli/9ohiu4/article68421888.ece/alternates/LANDSCAPE_1200/IMG-20240719-WA0101.jpg",
     address: "District Collectorate, Pudukkottai - 622001"
   },
   
@@ -1971,6 +1987,7 @@ description: [
     designation: "District Collector, Ramanathapuram",
     phone: "+91-4567-225210",
     email: "collrrmd@nic.in",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ3ER2g8K1eqoHPTk4N06BcT1iVTGeRMhYZw&s",
     address: "District Collectorate, Ramanathapuram - 623503"
   },
   
@@ -2077,6 +2094,7 @@ description: [
     designation: "District Collector, Sivaganga",
     phone: "+91-4565-242902",
     email: "collrsgr@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/yv6bw4/article69745482.ece/alternates/FREE_1200/10217_27_6_2025_20_9_12_1_IMG_20250627_WA0275.JPG",
     address: "District Collectorate, Sivaganga - 630561"
   },
   
@@ -2183,6 +2201,7 @@ description: [
     designation: "District Collector, Nagapattinam",
     phone: "+91-4365-240294",
     email: "collrnag@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/5lxewf/article66900938.ece/alternates/LANDSCAPE_1200/4861_27_5_2023_16_50_9_2_JOHNYTOMVERGHESE.JPEG",
     address: "District Collectorate, Nagapattinam - 611001"
   },
   
@@ -2287,6 +2306,7 @@ description: [
     designation: "District Collector, Karur",
     phone: "+91-4324-220210",
     email: "collrkar@nic.in",
+    image: "https://th-i.thgim.com/public/news/cities/Tiruchirapalli/g8dh1a/article67433871.ece/alternates/FREE_1200/Karur%20Collector.jpg",
     address: "District Collectorate, Karur - 639001"
   },
   
@@ -2393,6 +2413,7 @@ description: [
     designation: "District Collector, Perambalur",
     phone: "+91-4328-250240",
     email: "collrpbr@nic.in",
+    image: "https://tndmfperambalur.in/wp-content/uploads/2025/02/2024072096.jpg",
     address: "District Collectorate, Perambalur - 621212"
   },
   
@@ -2499,6 +2520,7 @@ description: [
     designation: "District Collector, The Nilgiris",
     phone: "+91-423-2443370",
     email: "collrnil@nic.in",
+    image: "https://static.toiimg.com/thumb/msid-111820431,width-1280,height-720,resizemode-72/111820431.jpg",
     address: "District Collectorate, Udhagamandalam - 643001"
   },
   
@@ -2605,6 +2627,7 @@ description: [
     designation: "District Collector, Ariyalur",
     phone: "+91-4329-222268",
     email: "collrarl@nic.in",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNoATiYjrk45gOyjn3imNQQQZLbAG5Bt5UGw&s",
     address: "District Collectorate, Ariyalur - 621704"
   },
   
@@ -2711,6 +2734,7 @@ description: [
     designation: "District Collector, Krishnagiri",
     phone: "+91-4343-229212",
     email: "collrkgi@nic.in",
+    image: "https://static.hindutamil.in/hindu/uploads/news/2023/05/22/xlarge/994100.jpg",
     address: "District Collectorate, Krishnagiri - 635001"
   },
   
@@ -2815,6 +2839,7 @@ description: [
     designation: "District Collector, Tiruvarur",
     phone: "+91-4366-253245",
     email: "collrtvr@nic.in",
+    image: "https://static.hindutamil.in/hindu/uploads/news/2023/02/05/xlarge/939215.jpg",
     address: "District Collectorate, Tiruvarur - 610001"
   },
   
@@ -2921,6 +2946,7 @@ description: [
     designation: "District Collector, Tiruvallur",
     phone: "+91-44-27660302",
     email: "collrtvl@nic.in",
+    image: "https://img.maalaimalar.com/Articles/2020/Oct/202010311516566119_Tamil_News_Ponnaiya-took-charge-new-Collector-of-Tiruvallur-District_SECVPF.gif",
     address: "District Collectorate, Tiruvallur - 602001"
   },
   
@@ -3027,6 +3053,7 @@ description: [
     designation: "District Collector, Kancheepuram",
     phone: "+91-44-27222001",
     email: "collrknc@nic.in",
+    image: "https://pbs.twimg.com/media/Fw9D97eaAAAbkhP.jpg:large",
     address: "District Collectorate, Kancheepuram - 631501"
   },
   
@@ -3133,6 +3160,7 @@ description: [
     designation: "District Collector, Virudhunagar",
     phone: "+91-4562-277500",
     email: "collrvdn@nic.in",
+    image: "https://th-i.thgim.com/public/incoming/yfxwxu/article69737243.ece/alternates/FREE_1200/9871_25_6_2025_21_29_2_1_F4E9053D_EA55_4873_8498_4CE54684F531.JPEG",
     address: "District Collectorate, Virudhunagar - 626001"
   },
   
@@ -3239,6 +3267,7 @@ description: [
     designation: "District Collector, Tenkasi",
     phone: "+91-4633-267300",
     email: "collrten@nic.in",
+    image: "https://media.maalaimalar.com/h-upload/2022/06/16/1713477-tenkasi-16-1.jpg",
     address: "District Collectorate, Tenkasi - 627811"
   },
   
@@ -3343,6 +3372,7 @@ description: [
     designation: "District Collector, Ranipet",
     phone: "+91-4172-246001",
     email: "collrrpt@nic.in",
+    image: "https://media.dtnext.in/imported/2022-04/afab0127-9f11-414a-b6e7-fe02ddecc3d6/714745.jpg",
     address: "District Collectorate, Ranipet - 632401"
   },
   
