@@ -85,7 +85,7 @@
  
  <body>
     <!-- Single Navbar Only -->
-    <header class="navbar">
+   <header class="navbar">
       <div class="navbar-left">
         <img
           src="https://aed.tn.gov.in/media/filer_public_thumbnails/filer_public/ea/c9/eac9c84e-a02c-4733-8a10-331dc8d1e1c3/tn_logo__eng.png__1200.0x1317.0_subsampling-2.png"
@@ -93,15 +93,37 @@
           class="logo"
         />
         <span class="title">Tamil Nadu District Portal</span>
+        
       </div>
-      <nav>
-        <a href="/html/navbar.html"></a>
+      <nav class="navbar-center">
+        <a href="../html/home.html">Home</a>
+        <a href="#" class="active">District Info</a>
+        <a href="#">Department</a>
+        <a href="#">Tourism</a>
+        <a href="#">Documents</a>
+        <a href="#">Notice</a>
       </nav>
       <div class="navbar-right">
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search the shit..." />
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
       </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#" class="mobile-nav-item">Home</a>
+      <a href="#" class="mobile-nav-item active">District Info</a>
+      <a href="#" class="mobile-nav-item">Tourism</a>
+      <a href="#" class="mobile-nav-item">Schemes</a>
+      <a href="#" class="mobile-nav-item">Contact</a>
+    </nav>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 
     <!-- Mobile Navigation -->
     <!-- <nav class="mobile-nav" id="mobileNav">
