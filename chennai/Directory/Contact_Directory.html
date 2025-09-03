@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chennai District Contact Directory</title>
+    <link rel="stylesheet" href="../About District/district_page.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        color: #252525;
+      }
+
+      .local-bodies-section h2 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .local-bodies-section h3 {
+        font-size: 22px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+
+      .table-container {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        font-size: 14px;
+      }
+
+      thead th {
+        background-color: #d1d1d1;
+        padding: 10px;
+        text-align: left;
+      }
+
+      tbody td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-transform: uppercase;
+      }
+
+      .dummy1234 {
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-left">
+        <img
+          src="https://aed.tn.gov.in/media/filer_public_thumbnails/filer_public/ea/c9/eac9c84e-a02c-4733-8a10-331dc8d1e1c3/tn_logo__eng.png__1200.0x1317.0_subsampling-2.png"
+          alt="Tamil Nadu Logo"
+          class="logo"
+        />
+        <span class="title">Tamil Nadu District Portal</span>
+      </div>
+      <nav class="navbar-center">
+        <a href="../html/home.html">Home</a>
+        <a href="#" class="active">District Info</a>
+        <a href="#">Department</a>
+        <a href="#">Tourism</a>
+        <a href="#">Documents</a>
+        <a href="#">Notice</a>
+      </nav>
+      <div class="navbar-right">
+        <input type="text" placeholder="Search the shit..." />
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+      </div>
+    </header>
+
+    <div class="dummy1234">
+      <h1>Chennai District Contact Directory</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Designation</th>
+            <th>Email</th>
+            <th>Landline No</th>
+            <th>Phone No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Designation">Collector</td>
+            <td data-label="Email">
+              <a href="mailto:collrchn@nic.in">collrchn@nic.in</a>
+            </td>
+            <td data-label="Landline No">
+              044-25268320 044-25268321 044-25268322 044-25268323 044-25228025
+            </td>
+            <td data-label="Phone No">9444131000</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">DRO</td>
+            <td data-label="Email">
+              <a href="mailto:drochn@nic.in">drochn@nic.in</a>
+            </td>
+            <td data-label="Landline No">044-25229454</td>
+            <td data-label="Phone No">9445000901</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">P.A.(General) to the Collector</td>
+            <td data-label="Email">
+              <a href="mailto:pagchn@nic.in">pagchn@nic.in</a>
+            </td>
+            <td data-label="Landline No">044-25268323</td>
+            <td data-label="Phone No">9445008132</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">Deputy Commissioner (Excise)</td>
+            <td data-label="Email">
+              <a href="mailto:dcechn@nic.in">dcechn@nic.in</a>
+            </td>
+            <td data-label="Landline No">044-25268322</td>
+            <td data-label="Phone No">9445074574</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">DRO(Stamps)</td>
+            <td data-label="Email">
+              <a href="mailto:drostamps@nic.in">drostamps@nic.in</a>
+            </td>
+            <td data-label="Landline No">044-25249697</td>
+            <td data-label="Phone No">9842411775</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">Special Deputy Collector (SSS)</td>
+            <td data-label="Email">
+              <a href="mailto:sdcchn@nic.in">sdcchn@nic.in</a>
+            </td>
+            <td data-label="Landline No">044-25268321</td>
+            <td data-label="Phone No">-</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              Revenue Divisional Officer, Chennai Central, AnnaNagar
+            </td>
+            <td data-label="Email">
+              <a href="mailto:rdochennaicentral@gmail.com"
+                >rdochennaicentral@gmail.com</a
+              >
+            </td>
+            <td data-label="Landline No">–</td>
+            <td data-label="Phone No">9445461834</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              Revenue Divisional Officer, Chennai North, Madhavaram
+            </td>
+            <td data-label="Email">
+              <a href="mailto:rdonorthchennai@gmail.com"
+                >rdonorthchennai@gmail.com</a
+              >
+            </td>
+            <td data-label="Landline No">–</td>
+            <td data-label="Phone No">9385250785</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              Revenue Divisional Officer, Chennai South, Guindy
+            </td>
+            <td data-label="Email">
+              <a href="mailto:rdosouthchennai@gmail.com"
+                >rdosouthchennai@gmail.com</a
+              >
+            </td>
+            <td data-label="Landline No">044-22351424</td>
+            <td data-label="Phone No">9150042806</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              District Adi Dravida Welfare Officer
+            </td>
+            <td data-label="Email">
+              <a href="mailto:dadwchn@nic.in">dadwchn@nic.in</a>
+            </td>
+            <td data-label="Landline No">–</td>
+            <td data-label="Phone No">7338801253</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              District Backward Class Welfare Officer
+            </td>
+            <td data-label="Email">
+              <a href="mailto:dbcchn@nic.in">dbcchn@nic.in</a>
+            </td>
+            <td data-label="Landline No">044-25241002</td>
+            <td data-label="Phone No">9445477825</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">Inspection Cell Officer</td>
+            <td data-label="Email">
+              <a href="mailto:ico.tnchn@gov.in">ico.tnchn@gov.in</a>
+            </td>
+            <td data-label="Landline No">–</td>
+            <td data-label="Phone No">9865652546</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              Assistant Director of Survey and Land Records
+            </td>
+            <td data-label="Email">
+              <a href="mailto:adsurchn@nic.in">adsurchn@nic.in</a>
+            </td>
+            <td data-label="Landline No">044-25226035</td>
+            <td data-label="Phone No">9940477088</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              District Differently Abled Welfare Officer (South)
+            </td>
+            <td data-label="Email">-</td>
+            <td data-label="Landline No">044-24714758</td>
+            <td data-label="Phone No">-</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              District Differently Abled Welfare Officer (North)
+            </td>
+            <td data-label="Email">
+              <a href="mailto:dawochn@gmail.com">dawochn@gmail.com</a>
+            </td>
+            <td data-label="Landline No">044-24315758</td>
+            <td data-label="Phone No">9499933470</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">District Manager (TAHDCO)</td>
+            <td data-label="Email">
+              <a href="mailto:dmmastahdco@yahoo.com">dmmastahdco@yahoo.com</a>
+            </td>
+            <td data-label="Landline No">044-25246344</td>
+            <td data-label="Phone No">9445029456</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              Personal Assistant(Accounts) to the Collector
+            </td>
+            <td data-label="Email">
+              <a href="mailto:paachn@nic.in">paachn@nic.in</a>
+            </td>
+            <td data-label="Landline No">044-25268322</td>
+            <td data-label="Phone No">-</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              Personal Assistant (Legal) to the Collector
+            </td>
+            <td data-label="Email">
+              <a href="mailto:palchn.tn@nic.in">palchn.tn@nic.in</a>
+            </td>
+            <td data-label="Landline No">-</td>
+            <td data-label="Phone No">-</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              District Social Welfare Officer (North)
+            </td>
+            <td data-label="Email">
+              <a href="mailto:chndswo.4568@gmail.com">chndswo.4568@gmail.com</a>
+            </td>
+            <td data-label="Landline No">044-25264568</td>
+            <td data-label="Phone No">9150056800</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              District Social Welfare Officer (South)
+            </td>
+            <td data-label="Email">-</td>
+            <td data-label="Landline No">044-25264568</td>
+            <td data-label="Phone No">9150056853</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              District Child Protection Officer (North)
+            </td>
+            <td data-label="Email">-</td>
+            <td data-label="Landline No">-</td>
+            <td data-label="Phone No">6369124017</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">
+              District Child Protection Officer (South)
+            </td>
+            <td data-label="Email">-</td>
+            <td data-label="Landline No">-</td>
+            <td data-label="Phone No">9884541997</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">District Education PC to Collector</td>
+            <td data-label="Email">
+              <a href="mailto:leninparthasarathy1973@gmail.com"
+                >leninparthasarathy1973@gmail.com</a
+              >
+            </td>
+            <td data-label="Landline No">-</td>
+            <td data-label="Phone No">9363051735</td>
+          </tr>
+          <tr>
+            <td data-label="Designation">Food Safety Officer</td>
+            <td data-label="Email">-</td>
+            <td data-label="Landline No">-</td>
+            <td data-label="Phone No">9442225555</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
