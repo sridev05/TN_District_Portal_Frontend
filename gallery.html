@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chennai Photo Gallery</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    padding: 24px 0 12px;
+    font-weight: 700;
+    color: #0277bd;
+  }
+  .gallery-container {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 16px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 24px;
+  }
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 13px;
+    box-shadow: 0 10px 28px rgba(2,119,189,0.08), 0 2px 4px rgba(0,0,0,0.11);
+    background: white;
+    cursor: pointer;
+    transition: transform 0.33s cubic-bezier(.21,1.02,.73,1.04), box-shadow 0.23s;
+  }
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 45px rgba(2,119,189,0.16), 0 9px 16px rgba(0,0,0,0.21);
+    z-index: 2;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    display: block;
+    border-radius: 13px 13px 0 0;
+    transition: filter 0.32s;
+    background: #eee;
+  }
+  .gallery-item:hover img {
+    filter: brightness(0.84);
+  }
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(2,119,189,.95));
+    color: #fff;
+    padding: 0 18px 18px 18px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 0 0 13px 13px;
+    opacity: 0;
+    transform: translateY(50%);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.32s cubic-bezier(.21,1.02,.73,1.04);
+    min-height: 74px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .gallery-item:hover .caption, .gallery-item:focus .caption {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 700px) {
+    h1 { font-size: 24px; padding: 16px 0 8px; }
+    .gallery-item img { height: 120px; }
+    .caption { font-size: 15px; padding: 0 8px 12px 8px; }
+  }
+</style>
+</head>
+<body>
+  <h1>Chennai Photo Gallery</h1>
+  <div class="gallery-container">
+    <div class="gallery-grid">
+      <div class="gallery-item" tabindex="0">
+        <img src="https://bestplaces.blog/wp-content/uploads/2023/03/Valluvar-Kottam.jpg" alt="Valluvar Kottam" />
+        <div class="caption">Valluvar Kottam - Iconic Cultural Monument</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://pbs.twimg.com/media/B6VSoNbCUAAWonb.jpg:large" alt="Beach Statue at Marina"/>
+        <div class="caption">Landmark Statue at Marina Beach</div>
+      </div>
+
+      
+      <div class="gallery-item" tabindex="0">
+        <img src="https://1.bp.blogspot.com/-VYZWXB2joUk/XTwT7sNWTzI/AAAAAAABZhs/w9H2DPn23GUCsJ0RKst-o5O4UvBMAlvDwCKgBGAs/s1600/2018-06-13%2B%25281%2529.jpg" alt="Government Museum" />
+        <div class="caption">Government Museum - History & Heritage</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://chennaitourism.travel/images/places-to-visit/headers/marina-beach-chennai-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Marina Beach" />
+        <div class="caption">Marina Beach - Seaside Splendor</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://www.tamilagam.in/img/fort-st-george-museum.jpg" alt="Fort St. George" />
+        <div class="caption">Fort St. George - Historic Fort</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://www.zigya.com/blog/wp-content/uploads/birla-planetarium.jpg" alt="Birla Planetarium" />
+        <div class="caption">Birla Planetarium - Science Discovery</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://www.tourmyindia.com/states/tamilnadu/images/elliot-beach1-1.jpg" alt="Elliot Beach" />
+        <div class="caption">Elliot’s Beach - Peaceful Shores</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.dZcyd7mtHqLVj4OWbIxe4gHaFq?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Venkatesa Perumal Temple" />
+        <div class="caption">Sri Venkatesa Perumal Temple</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://yometro.com/images/places/vpg-golden-beach.jpg" alt="Queen's Beach" />
+        <div class="caption">Queen's Beach, Chennai</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.Vu5LKCIrPoKiejBhY9yp4AAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Government Art Gallery" />
+        <div class="caption">Government Art Gallery</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://imgcld.yatra.com/ytimages/image/upload/v1461137322/Chennai-Ripon_Building1.jpg" alt="Ripon Building" />
+        <div class="caption">Ripon Building - Civic Landmark</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.fzpXa2nALrlabi1zKSyNBQHaE7?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Thousand Lights Beach" />
+        <div class="caption">Thousand Lights Beach</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2017/08/22222944/CholamandalArtistsVillage.jpg" alt="Cholamandal Artists' Village" />
+        <div class="caption">Cholamandal Artists' Village - Creative Hub</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://www.templeduniya.com/wp-content/uploads/2022/05/Project-39-min.jpg" alt="Kapaleeshwarar Temple"/>
+        <div class="caption">Kapaleeshwarar Temple, Mylapore</div>
+      </div>
+     <div class="gallery-item" tabindex="0">
+        <img src="https://img.onmanorama.com/content/dam/mm/en/travel/beyond-kerala/images/2018/10/5/chennai.jpg" alt="Chennai Collectorate" />
+        <div class="caption">Chennai Collectorate Building - Architectural Marvel</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+  <img src="https://image3.mouthshut.com/images/imagesp/925004348s.jpg" alt="Chennai Central Railway Station"/>
+  <div class="caption">Chennai Central Railway Station - Iconic Transport Landmark</div>
+</div>
+
+    </div>
+  </div>
+</body>
+</html>
