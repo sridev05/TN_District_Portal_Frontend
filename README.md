@@ -38,8 +38,4 @@ This project is a **frontend-only** web application that modernizes the Tamil Na
 
 - **Sri Dev** – Frontend Developer
 
----
 
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
