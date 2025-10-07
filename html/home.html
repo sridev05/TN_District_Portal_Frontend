@@ -72,7 +72,7 @@
         // Optional: live filtering by district name (case insensitive)
         document
           .getElementById("district-search")
-          .addEventListener("input", function (e) {
+          ?.addEventListener("input", function (e) {
             const term = e.target.value.trim().toLowerCase();
             const filtered = !term
               ? districts
@@ -100,5 +100,81 @@
         }
       });
     </script>
+
+    <!-- ✅ Added Search Suggestion Feature -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchInput");
+        const suggestionsBox = document.getElementById("suggestions");
+
+        // When typing in the search box
+        searchInput.addEventListener("input", function () {
+          const query = this.value.toLowerCase().trim();
+          suggestionsBox.innerHTML = "";
+
+          if (query === "") {
+            suggestionsBox.style.display = "none";
+            return;
+          }
+
+          // Filter districts matching query (English or Tamil)
+          const matches = districts.filter((d) =>
+            d.name_en.toLowerCase().startsWith(query) ||
+            d.name_ta.toLowerCase().startsWith(query)
+          );
+
+          if (matches.length > 0) {
+            suggestionsBox.style.display = "block";
+
+            matches.forEach((district) => {
+              const item = document.createElement("div");
+              item.className = "suggestion-item";
+              item.textContent = district.name_en;
+
+              // Click on suggestion → open district page
+              item.addEventListener("click", function () {
+                searchInput.value = district.name_en;
+                suggestionsBox.style.display = "none";
+                localStorage.setItem("selectedDistrict", district.name_en);
+                window.location.href = "../html/district_page.html";
+              });
+
+              suggestionsBox.appendChild(item);
+            });
+          } else {
+            suggestionsBox.style.display = "none";
+          }
+        });
+
+        // Hide suggestions when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!suggestionsBox.contains(e.target) && e.target !== searchInput) {
+            suggestionsBox.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <style>
+      .suggestions {
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 200px;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 1000;
+        border-radius: 5px;
+      }
+
+      .suggestion-item {
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+
+      .suggestion-item:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
   </body>
 </html>

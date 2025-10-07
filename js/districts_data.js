@@ -1967,7 +1967,7 @@ description: [
   name_ta: "இராமநாதபுரம்",
   url: "https://ramanathapuram.nic.in/",
   tagline: "Gateway to Rameswaram - Island District",
-  image: "https://www.incredibleindia.gov.in/en/tamil-nadu/rameswaram/pamban-bridge",
+  image: "https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/11/Rameshwaram.jpg",
   description: "Ramanathapuram is famous for being the gateway to the holy island of Rameswaram. The district has significant religious importance with the Ramanathaswamy Temple and is known for its coastal beauty, fishing industry, and seaweed cultivation. It includes several islands in the Palk Strait.",
   
   // District Information
@@ -2074,7 +2074,7 @@ description: [
   name_ta: "சிவகங்கை",
   url: "https://sivaganga.nic.in/",
   tagline: "Land of Marudhu Brothers - Freedom Fighters' District",
-  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/sivaganga-1656011717_8c5d29be7b2ad4f0a5c1.webp",
+  image: "https://tse4.mm.bing.net/th/id/OIP.QpWyFnwknTdmZr9HqpWBEAAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
   description: "Sivaganga is historically significant as the land of the Marudhu Brothers, early freedom fighters against British rule. The district is known for its temples, tanks (artificial lakes), and agricultural activities. It has a rich cultural heritage and played an important role in Tamil Nadu's history.",
   
   // District Information
@@ -3033,7 +3033,7 @@ description: [
   name_ta: "காஞ்சிபுரம்",
   url: "https://kancheepuram.nic.in/",
   tagline: "Silk City - City of Thousand Temples",
-  image: "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kancheepuram-1656010600_c4d3e7a5b3d1c7f6e8f9.webp",
+  image: "https://tripxl.com/blog/wp-content/uploads/2024/10/Kailasanathar-Temple-Kancheepuram.jpg",
   description: "Kancheepuram is known as the 'Silk City' and 'City of Thousand Temples'. It's famous worldwide for Kanjeevaram silk sarees and is one of the seven sacred cities (Sapta Puri) of Hinduism. The district has rich cultural heritage, ancient temples, and thriving silk weaving industry.",
   
   // District Information
