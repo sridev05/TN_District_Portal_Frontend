@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
     <title>Tamil Nadu District Portal</title>
     <link rel="stylesheet" href="../css/style.css" />
-    
   </head>
+
   <body>
     <header class="navbar">
       <div class="navbar-left">
@@ -18,40 +17,31 @@
         />
         <span class="title">Tamil Nadu District Portal</span>
       </div>
-
-      <!-- <nav class="navbar-center">
-        <a href="#">Home</a>
-        <a href="#">District Info</a>
-        <a href="#">Tourism</a>
-        <a href="#">Schemes</a>
-        <a href="#">Contact</a>
-      </nav> -->
-
-      
+       <input
+        type="text"
+        id="searchInput"
+        placeholder="Search district..."
+       
+      />
     </header>
 
-    <!-- rest of your content continues unchanged -->
     <section class="hero">
       <h1>Welcome to Tamil Nadu Districts Info Portal</h1>
       <p>Explore the districts and discover essential services and civic insights.</p>
-      <!-- <div class="hero-buttons">
-        <button>Explore Districts</button>
-        <button>Schemes</button>
-      </div> -->
     </section>
 
-     <section class="districts-section">
+    <!-- 🔍 Search Bar + Suggestions -->
+   
+
+    <section class="districts-section">
       <div id="districts-grid" class="districts-grid"></div>
     </section>
 
-      <footer class="footer">
+    <footer class="footer">
       <p>&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
     </footer>
 
-
-
     <script src="../js/data.js"></script>
-
     <script src="../js/districts_data.js"></script>
 
     <script>
@@ -61,20 +51,15 @@
         let shown = typeof districts !== "undefined" ? districts : [];
         renderDistricts(shown);
 
-        // Optional: live filtering by district name (case insensitive)
-        document
-          .getElementById("district-search")
-          ?.addEventListener("input", function (e) {
-          
-          .addEventListener("input", function (e) {
-            const term = e.target.value.trim().toLowerCase();
-            const filtered = !term
-              ? districts
-              : districts.filter((d) =>
-                  (d.name_en + " " + d.name_ta).toLowerCase().includes(term)
-                );
-            renderDistricts(filtered);
-          });
+        document.getElementById("searchInput")?.addEventListener("input", function (e) {
+          const term = e.target.value.trim().toLowerCase();
+          const filtered = !term
+            ? districts
+            : districts.filter((d) =>
+                (d.name_en + " " + d.name_ta).toLowerCase().includes(term)
+              );
+          renderDistricts(filtered);
+        });
 
         function renderDistricts(data) {
           grid.innerHTML = "";
@@ -95,13 +80,12 @@
       });
     </script>
 
-    <!-- ✅ Added Search Suggestion Feature -->
+    <!-- ✅ Search Suggestion Feature -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.getElementById("searchInput");
         const suggestionsBox = document.getElementById("suggestions");
 
-        // When typing in the search box
         searchInput.addEventListener("input", function () {
           const query = this.value.toLowerCase().trim();
           suggestionsBox.innerHTML = "";
@@ -111,7 +95,6 @@
             return;
           }
 
-          // Filter districts matching query (English or Tamil)
           const matches = districts.filter((d) =>
             d.name_en.toLowerCase().startsWith(query) ||
             d.name_ta.toLowerCase().startsWith(query)
@@ -119,20 +102,16 @@
 
           if (matches.length > 0) {
             suggestionsBox.style.display = "block";
-
             matches.forEach((district) => {
               const item = document.createElement("div");
               item.className = "suggestion-item";
               item.textContent = district.name_en;
-
-              // Click on suggestion → open district page
               item.addEventListener("click", function () {
                 searchInput.value = district.name_en;
                 suggestionsBox.style.display = "none";
                 localStorage.setItem("selectedDistrict", district.name_en);
                 window.location.href = "../html/district_page.html";
               });
-
               suggestionsBox.appendChild(item);
             });
           } else {
@@ -140,7 +119,6 @@
           }
         });
 
-        // Hide suggestions when clicking outside
         document.addEventListener("click", function (e) {
           if (!suggestionsBox.contains(e.target) && e.target !== searchInput) {
             suggestionsBox.style.display = "none";
@@ -169,6 +147,25 @@
       .suggestion-item:hover {
         background-color: #f0f0f0;
       }
+     #searchInput {
+            width: 240px; /* Use a fixed width similar to screenshot */
+            padding: 10px 16px;
+            font-size: 1rem;
+            border: 1.5px solid #bcd9c7;
+            border-radius: 8px;
+            background: #f8fcfa;
+            box-shadow: 0 2px 8px rgba(34, 41, 47, 0.06);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+            color: #384c4c;
+        }
+
+    #searchInput:focus {
+        border-color: #5bb662;
+        box-shadow: 0 2px 12px rgba(91, 182, 98, 0.15);
+        background: #fff;
+}
+
     </style>
   </body>
 </html>

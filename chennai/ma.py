@@ -12,7 +12,7 @@ def get_structure(path, root):
             file_tree[entry] = rel_path.replace("\\", "/")
     return file_tree
 
-root_dir = r"C:\Users\vishn\Documents\ui\TN_District_Portal_Frontend\chennai"
+root_dir = r"D:\projects\TN_DP_uid"
 structure = get_structure(root_dir, root_dir)
 
 print(json.dumps(structure, indent=4))

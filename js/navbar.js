@@ -17,9 +17,9 @@
 
   var links = {
     home: chennai + 'menu.html',
-    about_base: chennai + 'About District/collectors_lists.html',
+    about_base: chennai + '../chennai/About District/collectors_lists.html',
     about: {
-      history: chennai + 'About District/history.html',
+      history: chennai + '',
       collectors: chennai + 'About District/collectors_lists.html',
       elected: chennai + 'About District/Elected_Representatives.html',
       who: chennai + 'About District/who_is_who.html',
@@ -28,7 +28,7 @@
     },
     dir_base: chennai + 'Directory/Contact_Directory.html',
     dir: {
-      contact: chennai + 'Directory/Contact_Directory.html',
+      contact: chennai + '../chennai/Directory/Contact_Directory.html',
       taluk: chennai + 'Directory/Taluk_Officials_Contact.html',
       other: chennai + 'Directory/Other_Dept_Details.html',
       geo: chennai + 'Directory/AssDirector_of_Geo.html',
