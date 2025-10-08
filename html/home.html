@@ -63,13 +63,10 @@
 
         // Optional: live filtering by district name (case insensitive)
         document
-<<<<<<< HEAD
           .getElementById("district-search")
           ?.addEventListener("input", function (e) {
-=======
           
           .addEventListener("input", function (e) {
->>>>>>> 4826e04 (Updated main branch with latest local changes)
             const term = e.target.value.trim().toLowerCase();
             const filtered = !term
               ? districts
