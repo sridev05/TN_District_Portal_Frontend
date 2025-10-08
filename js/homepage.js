@@ -5,41 +5,23 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function initializeDistrictPortal() {
-  // Render district list and first district
+  // Render district list only; wait for user click to render details
   renderDistrictList();
   
-  // Get unique districts for initial rendering
-  const uniqueDistricts = districts.filter((district, index, self) => 
-    index === self.findIndex(d => d.name_en === district.name_en)
-  );
-  
-  renderDistrict(0, uniqueDistricts);
-  
-  // Set first district as active
+  // Remove any pre-set content/active state
   const list = document.getElementById('districtList');
-  if (list && list.children.length > 0) {
-    list.children[0].classList.add('active');
+  if (list) {
+    Array.from(list.children).forEach(c => c.classList.remove('active'));
   }
-  
-  // Add loading animation
-  addLoadingAnimation();
-  
-  // Add keyboard shortcuts info
-  addKeyboardShortcuts();
-}
 
-function addLoadingAnimation() {
+  // Clear main content until a district is clicked
   const mainContent = document.getElementById('mainContent');
   if (mainContent) {
-    mainContent.style.opacity = '0';
-    mainContent.style.transform = 'translateY(20px)';
-    mainContent.style.transition = 'all 0.5s ease';
-    
-    setTimeout(() => {
-      mainContent.style.opacity = '1';
-      mainContent.style.transform = 'translateY(0)';
-    }, 300);
+    mainContent.innerHTML = `<div style="text-align:center;color:#666;padding:24px;">Select a district to view its menu and details</div>`;
   }
+
+  // Add keyboard shortcuts info
+  addKeyboardShortcuts();
 }
 
 function addKeyboardShortcuts() {
@@ -84,10 +66,10 @@ function addKeyboardShortcuts() {
 // Add arrow key navigation for districts
 document.addEventListener('keydown', (e) => {
   const activeTab = document.querySelector('.district-tab.active');
-  if (!activeTab) return;
-  
   const allTabs = Array.from(document.querySelectorAll('.district-tab'));
-  const currentIndex = allTabs.indexOf(activeTab);
+  if (!allTabs.length) return;
+
+  const currentIndex = Math.max(0, allTabs.indexOf(activeTab));
   
   if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
     e.preventDefault();

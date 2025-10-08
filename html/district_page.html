@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tamil Nadu District Portal</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamil Nadu District Portal</title>
     <link
       rel="icon"
       href="https://live.staticflickr.com/2680/4477216562_b0d23d0fc2_b.jpg"
@@ -54,28 +54,35 @@
 
       .navbar-center {
         display: flex;
+        align-items: center;
         gap: 0;
-      }
-
-      .navbar-center a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 500;
-        padding: 10px 20px;
-        transition: color 0.3s ease;
-        border: none;
-        background: transparent;
         position: relative;
       }
 
-      /* Hover Effect for ALL items including active */
-      .navbar-center a:hover {
-        color: #28a745 !important;
+      /* Desktop dropdown nav structure inside header */
+      .navbar-center .nav { list-style: none; display: flex; gap: 8px; }
+      .navbar-center .nav > li { position: relative; }
+      .navbar-center .nav > li > a {
+        text-decoration: none; color: #333; font-weight: 500; padding: 10px 14px;
+        transition: color 0.3s ease, background .2s ease, box-shadow .2s ease;
+        border-radius: 16px;
       }
+      .navbar-center .nav > li > a:hover { color: #28a745; background: #f6f8fa; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+      .navbar-center .nav > li > a.active { color: #333; }
+      .navbar-center .sub-menu {
+        list-style: none; position: absolute; left: 0; top: calc(100% + 8px);
+        min-width: 240px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.08); padding: 8px 0; display: none; z-index: 1000;
+      }
+      .navbar-center .sub-menu li a { display:block; padding:8px 12px; color:#333; font-size:13px; text-decoration:none; }
+      .navbar-center .sub-menu li a:hover { background:#f5f7fb; color:#2d5aa0; }
+      .navbar-center .has-sub:hover > .sub-menu { display:block; }
 
-      /* Active state - same as default, no special styling */
-      .navbar-center a.active {
-        color: #333;
+      /* Hover Effect for ALL items including active */
+      /* Mobile: keep dropdowns stacked */
+      @media (max-width: 768px) {
+        .navbar-center { width: 100%; }
+        .navbar-center .nav { display: none; }
       }
 
       .navbar-right input {
@@ -490,18 +497,7 @@
         flex-wrap: wrap;
       }
 
-      .table-search {
-        padding: 8px 15px;
-        border: 1px solid #ccc;
-        font-size: 14px;
-        width: 200px;
-        outline: none;
-        border-radius: 20px;
-      }
-
-      .table-search:focus {
-        border-color: #2d5aa0;
-      }
+      
 
       .control-btn {
         background: #2d5aa0;
@@ -759,11 +755,7 @@
           flex-wrap: wrap;
         }
 
-        .table-search {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-
+        
         .schemes-table {
           font-size: 12px;
         }
@@ -860,44 +852,17 @@
         display: none !important;
       }
     </style>
-  </head>
+</head>
 
-  <body>
-    <!-- Single Navbar Only -->
-    <header class="navbar">
-      <div class="navbar-left">
-        <img
-          src="https://aed.tn.gov.in/media/filer_public_thumbnails/filer_public/ea/c9/eac9c84e-a02c-4733-8a10-331dc8d1e1c3/tn_logo__eng.png__1200.0x1317.0_subsampling-2.png"
-          alt="Tamil Nadu Logo"
-          class="logo"
-        />
-        <span class="title">Tamil Nadu District Portal</span>
-      </div>
-      <nav class="navbar-center">
-        <a href="../html/home.html">Home</a>
-        <a href="#" class="active">District Info</a>
-        <a href="#">Department</a>
-        <a href="#">Tourism</a>
-        <a href="#">Documents</a>
-        <a href="#">Notice</a>
-      </nav>
-      <div class="navbar-right">
-        <input type="text" placeholder="Search..." />
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-      </div>
-    </header>
+<body>
+    <!-- Shared Navbar placeholder -->
+    <div id="site-navbar"></div>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
-      <a href="#" class="mobile-nav-item">Home</a>
-      <a href="#" class="mobile-nav-item active">District Info</a>
-      <a href="#" class="mobile-nav-item">Tourism</a>
-      <a href="#" class="mobile-nav-item">Schemes</a>
-      <a href="#" class="mobile-nav-item">Contact</a>
-    </nav>
+    <!-- Mobile nav will be injected by shared navbar script -->
 
     <!-- Banner -->
     <div class="banner"></div>
+<!-- removed embedded dropdown menu: moved items to top navbar -->
 
     <!-- Main Content -->
     <main class="main-content">
@@ -1195,12 +1160,7 @@
         <div class="schemes-header">
           <div class="schemes-title">Government Schemes</div>
           <div class="schemes-controls">
-            <input
-              type="text"
-              class="table-search"
-              id="tableSearch"
-              placeholder="Search schemes..."
-            />
+            
             <button class="control-btn" onclick="exportToExcel()">
               Export to Excel
             </button>
@@ -1234,16 +1194,17 @@
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
-      </div>
+  </div>
     </footer>
 
     <!-- Include the districts data and district render scripts -->
-    <script src="../js/districts_data.js"></script>
-    <script src="../js/district_render.js"></script>
+  <script src="../js/districts_data.js"></script>
+  <script src="../js/district_render.js"></script>
+  <script src="../js/navbar.js"></script>
     <script src="../js/script.js"></script>
 
-  </body>
-</html> 
+</body>
+</html>
 
 <!-- 
 <!DOCTYPE html>

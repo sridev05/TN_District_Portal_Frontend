@@ -27,15 +27,7 @@
         <a href="#">Contact</a>
       </nav> -->
 
-      <div class="navbar-right">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search..."
-          autocomplete="off"
-        />
-        <div id="suggestions" class="suggestions" style="display: none"></div>
-      </div>
+      
     </header>
 
     <!-- rest of your content continues unchanged -->
@@ -71,8 +63,13 @@
 
         // Optional: live filtering by district name (case insensitive)
         document
+<<<<<<< HEAD
           .getElementById("district-search")
           ?.addEventListener("input", function (e) {
+=======
+          
+          .addEventListener("input", function (e) {
+>>>>>>> 4826e04 (Updated main branch with latest local changes)
             const term = e.target.value.trim().toLowerCase();
             const filtered = !term
               ? districts
