@@ -5,19 +5,167 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Elected Representatives - Chennai</title>
 <link rel="stylesheet" href="../About District/district_page.css" />
- <style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-body {
-  font-family: Arial, sans-serif;
-
-  color: #252525;
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  color: #252525;
+  background-color: #f9f9f9;
+}
+
+/* ====== Navbar Styling ====== */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12px 40px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-left img {
+  height: 48px;
+}
+
+.navbar-left span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ====== Menu Styling ====== */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.menu > li > a:hover,
+.menu > li:hover > a {
+  background-color: #e6f4ea;
+  color: #006400;
+}
+
+/* ====== Dropdown Styling ====== */
+.dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 250px;
+  padding: 10px 0;
+  animation: fadeIn 0.25s ease;
+  list-style: none;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.dropdown a:hover {
+  background-color: #e6f4ea;
+  color: #006400;
+}
+
+.menu li:hover > .dropdown {
+  display: flex;
+}
+
+/* ====== Submenu ====== */
+.dropdown li {
+  position: relative;
+}
+
+.dropdown .submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 250px;
+  padding: 10px 0;
+  animation: fadeIn 0.25s ease;
+}
+
+.dropdown li:hover > .submenu {
+  display: flex;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .dropdown {
+    position: static;
+    box-shadow: none;
+  }
+  .dropdown .submenu {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+/* ====== Animation ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Table Section ====== */
 .local-bodies-section h2 {
   font-size: 28px;
   font-weight: bold;
@@ -52,184 +200,16 @@ tbody td {
   text-transform: uppercase;
 }
 
-.dummy1234{
-    margin-left :150px;
-    margin-right: 150px;
-    margin-top: 30px;
+.dummy1234 {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 30px;
 }
-
-  </style>
-</head>
-<body>
-
-
-          <!-- Single Navbar Only -->
-    <header class="navbar">
-    <head>
-
-  <style>
-    /* ====== Base Styling ====== */
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    header {
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 12px 40px;
-    }
-
-    .navbar-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .navbar-left img {
-      height: 48px;
-    }
-
-    .navbar-left span {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #222;
-    }
-
-    /* ====== Menu Styling ====== */
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu > li {
-      position: relative;
-      list-style: none;
-    }
-
-    .menu > li > a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-      font-size: 16px;
-      padding: 8px 14px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .menu > li > a:hover,
-    .menu > li:hover > a {
-      background-color: #e6f4ea;
-      color: #006400;
-    }
-
-    /* ====== Dropdown Styling ====== */
-    .dropdown {
-      position: absolute;
-      top: 45px;
-      left: 0;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      display: none;
-      flex-direction: column;
-      min-width: 250px;
-      padding: 10px 0;
-      animation: fadeIn 0.25s ease;
-      list-style: none;
-    }
-
-    .dropdown a {
-      text-decoration: none;
-      color: #333;
-      padding: 10px 20px;
-      font-size: 14px;
-      display: block;
-      transition: all 0.2s ease;
-    }
-
-    .dropdown a:hover {
-      background-color: #e6f4ea;
-      color: #006400;
-    }
-
-    .menu li:hover > .dropdown {
-      display: flex;
-    }
-
-    /* ====== Submenu (Right Side Dropdown) ====== */
-    .dropdown li {
-      position: relative;
-      list-style: none;
-    }
-
-    .dropdown .submenu {
-      position: absolute;
-      top: 0;
-      left: 100%;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      display: none;
-      flex-direction: column;
-      min-width: 250px;
-      padding: 10px 0;
-      animation: fadeIn 0.25s ease;
-      list-style: none;
-    }
-
-    .dropdown li:hover > .submenu {
-      display: flex;
-    }
-
-    /* ====== Responsive ====== */
-    @media (max-width: 900px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .menu {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-      }
-
-      .dropdown {
-        position: static;
-        box-shadow: none;
-      }
-
-      .dropdown .submenu {
-        position: static;
-        box-shadow: none;
-      }
-    }
-
-    /* ====== Animation ====== */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+</style>
 </head>
 
 <body>
+
   <header>
     <nav class="navbar">
       <div class="navbar-left">
@@ -238,9 +218,9 @@ tbody td {
       </div>
 
       <ul class="menu">
-        <li><a href="#" >Home</a></li>
+        <li><a href="#">Home</a></li>
 
-       <li>
+        <li>
           <a href="#">About District</a>
           <ul class="dropdown">
             <li><a href="./history.html">History</a></li>
@@ -312,54 +292,55 @@ tbody td {
     </nav>
   </header>
 
-    <div class="dummy1234">
-<h1>Elected Representatives - Chennai</h1>
+  <div class="dummy1234">
+    <h1>Elected Representatives - Chennai</h1>
 
-<h2 style="margin-bottom: 5px;">Members of Parliament (Lok Sabha)</h2>
-<table>
-<thead>
-  <tr>
-    <th>Constituency</th>
-    <th>Name of the Member</th>
-  </tr>
-</thead>
-<tbody>
-  <tr><td data-label="Constituency">Chennai – Central</td><td data-label="Name of the Member">Thiru Dayanidhi Maran</td></tr>
-  <tr><td data-label="Constituency">Chennai – North</td><td data-label="Name of the Member">Dr.V.Kalanidhi</td></tr>
-  <tr><td data-label="Constituency">Chennai – South</td><td data-label="Name of the Member">Dr.T.Sumathy (a) Thamizhachi Thangapandian</td></tr>
-</tbody>
-</table>
+    <h2 style="margin-bottom: 5px;">Members of Parliament (Lok Sabha)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Constituency</th>
+          <th>Name of the Member</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Chennai – Central</td><td>Thiru Dayanidhi Maran</td></tr>
+        <tr><td>Chennai – North</td><td>Dr.V.Kalanidhi</td></tr>
+        <tr><td>Chennai – South</td><td>Dr.T.Sumathy (a) Thamizhachi Thangapandian</td></tr>
+      </tbody>
+    </table>
 
-<h2>Members of Legislative Assembly - Chennai District</h2>
-<p><em>(Constituency Number-wise)</em></p>
-<table>
-<thead>
-  <tr>
-    <th>AC No.</th>
-    <th>Assembly Constituency</th>
-    <th>Name of Member</th>
-    <th>Party</th>
-  </tr>
-</thead>
-<tbody>
-  <tr><td data-label="AC No.">11</td><td data-label="Assembly Constituency">Dr. Radhakrishnan Nagar</td><td data-label="Name of Member">Thiru Ebenezer.J.J (a) John ebenezer.J</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">12</td><td data-label="Assembly Constituency">Perambur</td><td data-label="Name of Member">Thiru Shekar.R.D</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">13</td><td data-label="Assembly Constituency">Kolathur</td><td data-label="Name of Member">Thiru M.K.Stalin</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">14</td><td data-label="Assembly Constituency">Villivakkam</td><td data-label="Name of Member">Thiru A.Vetriazhagan</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">15</td><td data-label="Assembly Constituency">Thiru.Vi.Ka.Nagar (SC)</td><td data-label="Name of Member">Thiru Sivakumar.P</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">16</td><td data-label="Assembly Constituency">Egmore (SC)</td><td data-label="Name of Member">Thiru I. Paranthamen</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">17</td><td data-label="Assembly Constituency">Royapuram</td><td data-label="Name of Member">Thiru Murthy.R.IDream</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">18</td><td data-label="Assembly Constituency">Harbour</td><td data-label="Name of Member">Thiru Sekar Babu.P.K</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">19</td><td data-label="Assembly Constituency">Chepauk-Thiruvallikeni</td><td data-label="Name of Member">Thiru Udhayanidhi stalin</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">20</td><td data-label="Assembly Constituency">Thousand Lights</td><td data-label="Name of Member">Thiru N.Ezhilan</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">21</td><td data-label="Assembly Constituency">Anna Nagar</td><td data-label="Name of Member">Thiru M.K.Mohan</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">22</td><td data-label="Assembly Constituency">Virugampakkam</td><td data-label="Name of Member">Thiru AMV.Prabhakara raja</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">23</td><td data-label="Assembly Constituency">Saidapet</td><td data-label="Name of Member">Thiru Ma.Subramanian</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">24</td><td data-label="Assembly Constituency">Thiyagarayanagar</td><td data-label="Name of Member">Thiru J.Karunanithi</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">25</td><td data-label="Assembly Constituency">Mylapore</td><td data-label="Name of Member">Thiru Velu.DHA</td><td data-label="Party">DMK</td></tr>
-  <tr><td data-label="AC No.">26</td><td data-label="Assembly Constituency">Velachery</td><td data-label="Name of Member">Thiru JMH.Aassan maulaana</td><td data-label="Party">Indian National Congress (INC)</td></tr>
-</tbody>
-</table>
-</div>
+    <h2>Members of Legislative Assembly - Chennai District</h2>
+    <p><em>(Constituency Number-wise)</em></p>
+    <table>
+      <thead>
+        <tr>
+          <th>AC No.</th>
+          <th>Assembly Constituency</th>
+          <th>Name of Member</th>
+          <th>Party</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>11</td><td>Dr. Radhakrishnan Nagar</td><td>Thiru Ebenezer.J.J (a) John ebenezer.J</td><td>DMK</td></tr>
+        <tr><td>12</td><td>Perambur</td><td>Thiru Shekar.R.D</td><td>DMK</td></tr>
+        <tr><td>13</td><td>Kolathur</td><td>Thiru M.K.Stalin</td><td>DMK</td></tr>
+        <tr><td>14</td><td>Villivakkam</td><td>Thiru A.Vetriazhagan</td><td>DMK</td></tr>
+        <tr><td>15</td><td>Thiru.Vi.Ka.Nagar (SC)</td><td>Thiru Sivakumar.P</td><td>DMK</td></tr>
+        <tr><td>16</td><td>Egmore (SC)</td><td>Thiru I. Paranthamen</td><td>DMK</td></tr>
+        <tr><td>17</td><td>Royapuram</td><td>Thiru Murthy.R.IDream</td><td>DMK</td></tr>
+        <tr><td>18</td><td>Harbour</td><td>Thiru Sekar Babu.P.K</td><td>DMK</td></tr>
+        <tr><td>19</td><td>Chepauk-Thiruvallikeni</td><td>Thiru Udhayanidhi Stalin</td><td>DMK</td></tr>
+        <tr><td>20</td><td>Thousand Lights</td><td>Thiru N.Ezhilan</td><td>DMK</td></tr>
+        <tr><td>21</td><td>Anna Nagar</td><td>Thiru M.K.Mohan</td><td>DMK</td></tr>
+        <tr><td>22</td><td>Virugampakkam</td><td>Thiru AMV.Prabhakara Raja</td><td>DMK</td></tr>
+        <tr><td>23</td><td>Saidapet</td><td>Thiru Ma.Subramanian</td><td>DMK</td></tr>
+        <tr><td>24</td><td>Thiyagarayanagar</td><td>Thiru J.Karunanithi</td><td>DMK</td></tr>
+        <tr><td>25</td><td>Mylapore</td><td>Thiru Velu.DHA</td><td>DMK</td></tr>
+        <tr><td>26</td><td>Velachery</td><td>Thiru JMH.Aassan Maulaana</td><td>Indian National Congress (INC)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
 </body>
 </html>
