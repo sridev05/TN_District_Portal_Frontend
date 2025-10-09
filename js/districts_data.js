@@ -6,7 +6,7 @@ const districts = [
   name_ta: "சென்னை",
   url: "https://chennai.nic.in/",
   tagline: "Gateway of South India",
-  image: "https://live.staticflickr.com/7220/7319824942_b984306ab9.jpg",
+  image: "https://i.ytimg.com/vi/gCouE441TW4/maxresdefault.jpg",
   description: `Chennai, originally known as Madras Patnam, was located in the province of Tondaimandalam, an area lying between Pennar river of Nellore and the Pennar river of Cuddalore. The capital of the province was Kancheepuram. Tondaimandalam was ruled in the 2nd century A.D. by Tondaiman Ilam Tiraiyan, who was a representative of the Chola family at Kanchipuram. It is believed that Ilam Tiraiyan must have subdued Kurumbas, the original inhabitants of the region and established his rule over Tondaimandalam. Subsequent to Ilam Tiraiyan, the region seemed to have been ruled by the Chola Prince Ilam Killi. The Chola occupation of Tondaimandalam was put to an end by the Andhra Satavahana incursions from the north under their King Pulumayi II. They appointed chieftains to look after the Kancheepuram region. Bappaswami, who is considered as the first Pallava to rule from Kancheepuram, was himself a chieftain at Kancheepuram under the Satavahana empire in the beginning of the 3rd century A.D. The Pallavas who had so far been merely viceroys, became independent rulers of Kancheepuram and its surrounding areas.
 
 The Pallavas held sway over this region from the beginning of the 3rd century A.D. to the closing years of the 9th century, except for the interval of some decades when the region was under Kalabharas. Pallavas were defeated by the Chola under Aditya-I by about 879 A.D., and the region was brought under Chola rule. Pandyas under Jatavarman Sundara Pandya rose to power, and the region was brought under Pandya rule by putting an end to Chola supremacy in 1264 A.D. 
@@ -27,7 +27,8 @@ The Pallavas held sway over this region from the beginning of the 3rd century A.
     designation: "District Collector, Chennai",
     phone: "+91-44-2841-9043",
     email: "collector.chennai@tn.gov.in",
-    address: "Collectorate, Chennai - 600001"
+    address: "Collectorate, Chennai - 600001",
+    image: "https://connectingchennai.com/govinfo_image/1713201558_Chennai%20collector%20Tmt.%20Rashmi%20siddharth%20zagade,%20I.A.S.,.jpg"
   },
   administration: {
     zones: "15 Zones",

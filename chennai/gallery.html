@@ -3,65 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Adi Dravidar and Tribal Welfare - Chennai District</title>
-<link rel="stylesheet" href="../About District/district_page.css" />
- <style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-body {
-  font-family: Arial, sans-serif;
-
-  color: #252525;
-}
-
-.local-bodies-section h2 {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.local-bodies-section h3 {
-  font-size: 22px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
-
-.table-container {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 30px;
-  font-size: 14px;
-}
-
-thead th {
-  background-color: #d1d1d1;
-  padding: 10px;
-  text-align: left;
-}
-
-tbody td {
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-transform: uppercase;
-}
-
-.dummy1234{
-    margin-left :150px;
-    margin-right: 150px;
-    margin-top: 30px;
-}
-
-  </style>
-</head>
-<body>
-<head>
+<title>Chennai Photo Gallery</title>
+    <head>
 
   <style>
     /* ====== Base Styling ====== */
@@ -239,12 +182,12 @@ tbody td {
        <li>
           <a href="#">About District</a>
           <ul class="dropdown">
-            <li><a href="./history.html">History</a></li>
-            <li><a href="./who_is_who.html">Who’s Who</a></li>
-            <li><a href="./collectors_lists.html">List Of Collectors</a></li>
-            <li><a href="./local_bodies.html">Local Bodies</a></li>
-            <li><a href="./Elected_Representatives.html">Elected Representatives</a></li>
-            <li><a href="./eGovernance.html">eGovernance</a></li>
+            <li><a href="../chennai/About District/history.html">History</a></li>
+            <li><a href="../chennai/About District/who_is_who.html">Who’s Who</a></li>
+            <li><a href="../chennai/About District/collectors_lists.html">List Of Collectors</a></li>
+            <li><a href="../chennai/About District/local_bodies.html">Local Bodies</a></li>
+            <li><a href="../chennai/About District/Elected_Representatives.html">Elected Representatives</a></li>
+            <li><a href="../chennai/About District/eGovernance.html">eGovernance</a></li>
           </ul>
         </li>
 
@@ -309,145 +252,160 @@ tbody td {
   </header>
 </body>
 </html>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    padding: 24px 0 12px;
+    font-weight: 700;
+    color: #0277bd;
+  }
+  .gallery-container {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 16px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 24px;
+  }
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 13px;
+    box-shadow: 0 10px 28px rgba(2,119,189,0.08), 0 2px 4px rgba(0,0,0,0.11);
+    background: white;
+    cursor: pointer;
+    transition: transform 0.33s cubic-bezier(.21,1.02,.73,1.04), box-shadow 0.23s;
+  }
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 45px rgba(2,119,189,0.16), 0 9px 16px rgba(0,0,0,0.21);
+    z-index: 2;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    display: block;
+    border-radius: 13px 13px 0 0;
+    transition: filter 0.32s;
+    background: #eee;
+  }
+  .gallery-item:hover img {
+    filter: brightness(0.84);
+  }
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent,rgb(87, 167, 87));
+    color: #fff;
+    padding: 0 18px 18px 18px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 0 0 13px 13px;
+    opacity: 0;
+    transform: translateY(50%);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.32s cubic-bezier(.21,1.02,.73,1.04);
+    min-height: 74px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .gallery-item:hover .caption, .gallery-item:focus .caption {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 700px) {
+    h1 { font-size: 24px; padding: 16px 0 8px; }
+    .gallery-item img { height: 120px; }
+    .caption { font-size: 15px; padding: 0 8px 12px 8px; }
+  }
+</style>
+</head>
+<body>
+  <h1>Chennai Photo Gallery</h1>
+  <div class="gallery-container">
+    <div class="gallery-grid">
+      <div class="gallery-item" tabindex="0">
+        <img src="https://bestplaces.blog/wp-content/uploads/2023/03/Valluvar-Kottam.jpg" alt="Valluvar Kottam" />
+        <div class="caption">Valluvar Kottam - Iconic Cultural Monument</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://pbs.twimg.com/media/B6VSoNbCUAAWonb.jpg:large" alt="Beach Statue at Marina"/>
+        <div class="caption">Landmark Statue at Marina Beach</div>
+      </div>
 
-<div class="dummy1234">
-<h1>Adi Dravidar and Tribal Welfare - Chennai District</h1>
-
-<p>In Chennai District, 2 Higher Secondary Schools, 3 High Schools, 5 Primary and 1 Government Tribal Residential Schools are functioning. All Schools are functioning in Government Buildings and all Basic Amenities are sufficiently available.</p>
-
-<p>Funding for repair works through the Adidravidar Department:</p>
-
-
-<h2 style="margin-top: 10px;">Schools</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Schools Name</th>
-      <th>No of Schools</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Tribal Residential Primary School</td><td>1</td></tr>
-    <tr><td>Primary School</td><td>5</td></tr>
-    <tr><td>High Schools</td><td>3</td></tr>
-    <tr><td>Higher Secondary Schools</td><td>2</td></tr>
-    <tr><th>Total</th><th>11</th></tr>
-  </tbody>
-</table>
-
-<p>There are 1098 boys and 1043 girls studying in these schools. Free textbooks, notebooks, and uniforms are supplied every year.</p>
-
-<h3 style="margin-top: 10px;" >Results</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Year</th>
-      <th>% of pass in X Std</th>
-      <th>% of pass in XII Std</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>2017-2018</td>
-      <td>92.4%</td>
-      <td>92.3%</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Hostel</h2>
-<p>There are 22 Adi Dravidar Welfare hostels functioning under the Adi Dravidar Welfare Department.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>SL.NO.</th>
-      <th>Hostel</th>
-      <th>Boys</th>
-      <th>Girls</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>Research PhD</td><td>1</td><td>1</td></tr>
-    <tr><td>2</td><td>Post Graduate</td><td>4</td><td>3</td></tr>
-    <tr><td>3</td><td>College</td><td>11</td><td>4</td></tr>
-    <tr><td>4</td><td>I.T.I</td><td>2</td><td>1</td></tr>
-    <tr><td>5</td><td>Schools</td><td>1</td><td>1</td></tr>
-    <tr><th>Total</th><th>12</th><th>10</th></tr>
-  </tbody>
-</table>
-
-<p>There are 2459 students staying in these hostels. Uniforms, special guides, and question bank books are supplied to students. Regular hostel inspections are conducted.</p>
-
-<h3 style="margin-top: 10px;" >Hostel Repairs and Maintenance</h3>
-<p>As per G.O ms. No. 15 dated 15.03.2017, Rs. 13.59 lakhs were allotted for 10 hostels towards repairs and maintenance. Rs. 37.60 lakhs were sanctioned for repairs of 8 hostels.</p>
-
-<h3 style="margin-top: 10px;">Hostel Admission</h3>
-<p>According to G.O.79 dated 13.08.2012, 85% SC, 10% BC, and 5% OC students are admitted. Admission is based on selection by hostel committee members. Annual family income must be within 2 lakhs.</p>
-
-<h3 style="margin-top: 10px;">Required Documents for Hostel Admission</h3>
-<ul>
-  <li>Community Certificate</li>
-  <li>Aadhar card</li>
-  <li>Ration Card</li>
-  <li>Bonafide Certificate</li>
-  <li>Bank Account details</li>
-</ul>
-
-<h3 style="margin-top: 10px;">Hostel Details – 2017-18</h3>
-<table>
-  <thead>
-    <tr>
-      <th>S.No.</th>
-      <th>Name of Hostel</th>
-      <th>Amount of Rent</th>
-      <th>Sanctioned Strength</th>
-      <th>Present Strength</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>MC Raja College Boys Hostel 396, West C.I.T Nagar, Saidapet Chennai-15</td>
-      <td>Own Building</td>
-      <td>490</td>
-      <td>476</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>MC Raja College Boys Hostel (Annex), 396, Pallaku Maniyam Street, Mylapore Chennai-4</td>
-      <td>Own Building</td>
-      <td>150</td>
-      <td>150</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Government College Boys Hostel, No.7, Semiyars Road, Nandanam, Chennai-35</td>
-      <td>Own Building</td>
-      <td>340</td>
-      <td>315</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Government College Boys Hostel, No.29, Sakthi Nagar Kodambakkam, Chennai-24.</td>
-      <td>Own Building</td>
-      <td>250</td>
-      <td>250</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Government College Boys Hostel, Chennai @ Kodambakkam, No.29, Sakthi Nagar Kodambakkam, Chennai-24.</td>
-      <td>Own Building</td>
-      <td>100</td>
-      <td>100</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 style="margin-top: 10px;" >Scholarships and Concessions</h2>
-<p>SC/ST girls studying from III to V std are given Rs. 500 per year, VI std Rs. 1000, and 7th & 8th std Rs. 1500 as incentives.</p>
-<p>In 2017-18, Rs. 1599.106 lakhs were sanctioned as scholarships to 39,111 students in Chennai district. Rs. 1613.97 lakhs were allotted for this scheme for the year 2017-18.</p>
-<p>Post metric and pre metric scholarships are sanctioned online. Particulars are submitted by Headmasters or Principals to the District ADW Office and forwarded to the Directorate, making ECS payments directly to student accounts.</p>
+      
+      <div class="gallery-item" tabindex="0">
+        <img src="https://1.bp.blogspot.com/-VYZWXB2joUk/XTwT7sNWTzI/AAAAAAABZhs/w9H2DPn23GUCsJ0RKst-o5O4UvBMAlvDwCKgBGAs/s1600/2018-06-13%2B%25281%2529.jpg" alt="Government Museum" />
+        <div class="caption">Government Museum - History & Heritage</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://chennaitourism.travel/images/places-to-visit/headers/marina-beach-chennai-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Marina Beach" />
+        <div class="caption">Marina Beach - Seaside Splendor</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://www.tamilagam.in/img/fort-st-george-museum.jpg" alt="Fort St. George" />
+        <div class="caption">Fort St. George - Historic Fort</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://www.zigya.com/blog/wp-content/uploads/birla-planetarium.jpg" alt="Birla Planetarium" />
+        <div class="caption">Birla Planetarium - Science Discovery</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://www.tourmyindia.com/states/tamilnadu/images/elliot-beach1-1.jpg" alt="Elliot Beach" />
+        <div class="caption">Elliot’s Beach - Peaceful Shores</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.dZcyd7mtHqLVj4OWbIxe4gHaFq?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Venkatesa Perumal Temple" />
+        <div class="caption">Sri Venkatesa Perumal Temple</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://yometro.com/images/places/vpg-golden-beach.jpg" alt="Queen's Beach" />
+        <div class="caption">Queen's Beach, Chennai</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.Vu5LKCIrPoKiejBhY9yp4AAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Government Art Gallery" />
+        <div class="caption">Government Art Gallery</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://imgcld.yatra.com/ytimages/image/upload/v1461137322/Chennai-Ripon_Building1.jpg" alt="Ripon Building" />
+        <div class="caption">Ripon Building - Civic Landmark</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.fzpXa2nALrlabi1zKSyNBQHaE7?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Thousand Lights Beach" />
+        <div class="caption">Thousand Lights Beach</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2017/08/22222944/CholamandalArtistsVillage.jpg" alt="Cholamandal Artists' Village" />
+        <div class="caption">Cholamandal Artists' Village - Creative Hub</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="https://www.templeduniya.com/wp-content/uploads/2022/05/Project-39-min.jpg" alt="Kapaleeshwarar Temple"/>
+        <div class="caption">Kapaleeshwarar Temple, Mylapore</div>
+      </div>
+     <div class="gallery-item" tabindex="0">
+        <img src="https://img.onmanorama.com/content/dam/mm/en/travel/beyond-kerala/images/2018/10/5/chennai.jpg" alt="Chennai Collectorate" />
+        <div class="caption">Chennai Collectorate Building - Architectural Marvel</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+  <img src="https://image3.mouthshut.com/images/imagesp/925004348s.jpg" alt="Chennai Central Railway Station"/>
+  <div class="caption">Chennai Central Railway Station - Iconic Transport Landmark</div>
 </div>
+
+    </div>
+  </div>
 </body>
 </html>

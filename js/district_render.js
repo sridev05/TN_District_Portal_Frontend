@@ -169,7 +169,7 @@ function renderDistrict(idx = 0, districtArray = null) {
   out.push(`
     <div class="collector-info">
       <div class="collector-header">
-        <img class="collector-image" src="${d.image}" alt="${d.name_en}" onerror="this.src='https://via.placeholder.com/120x120/2d5aa0/ffffff?text=${d.name_en.charAt(0)}'">
+        <img class="collector-image" src="${d.collector.image || d.image}" alt="${d.name_en}" onerror="this.src='https://via.placeholder.com/120x120/2d5aa0/ffffff?text=${d.name_en.charAt(0)}'">
       <div class="collector-details">
           <h3>${d.collector.name}</h3>
           <p>${d.collector.designation}</p>
@@ -467,7 +467,7 @@ function updateDistrictContent(districtData) {
         collectorInfo.innerHTML = `
             <div class="collector-header">
                 <img
-                    src="../image/che_dis_col.jpeg"
+                    src="${districtData.collector.image || '../image/che_dis_col.jpeg'}"
                     alt="District Collector"
                     class="collector-image"
                 />
