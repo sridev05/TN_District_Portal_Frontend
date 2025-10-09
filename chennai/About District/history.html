@@ -8,13 +8,13 @@
       rel="icon"
       href="https://live.staticflickr.com/2680/4477216562_b0d23d0fc2_b.jpg"
     />
-     <link rel="stylesheet" href="../About District/district_page.css" />
+     <!-- <link rel="stylesheet" href="../About District/district_page.css" /> -->
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-     
+    
     }
 
 
@@ -76,25 +76,23 @@
         align-items: flex-start;
       }
 
-      nav a {
+      /* nav a {
         margin: 10px 10px 0 0;
         display: inline-block;
-      }
+      } */
     }
   </style>
  
  <body>
     <!-- Single Navbar Only -->
-   <header class="navbar">
-      <div class="navbar-left">
-        <img
+        <!-- <img
           src="https://aed.tn.gov.in/media/filer_public_thumbnails/filer_public/ea/c9/eac9c84e-a02c-4733-8a10-331dc8d1e1c3/tn_logo__eng.png__1200.0x1317.0_subsampling-2.png"
           alt="Tamil Nadu Logo"
           class="logo"
         />
-        <span class="title">Tamil Nadu District Portal</span>
+        <span class="title">Tamil Nadu District Portal</span> -->
         
-      </div>
+      <!-- </div>
       <nav class="navbar-center">
         <a href="../html/home.html">Home</a>
         <a href="#" class="active">District Info</a>
@@ -102,21 +100,264 @@
         <a href="#">Tourism</a>
         <a href="#">Documents</a>
         <a href="#">Notice</a>
-      </nav>
-      <div class="navbar-right">
-        <input type="text" placeholder="Search the shit..." />
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+      </nav> -->
+
+<head>
+
+  <style>
+    /* ====== Base Styling ====== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 12px 40px;
+  
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-left img {
+      height: 48px;
+    }
+
+    .navbar-left span {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    /* ====== Menu Styling ====== */
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu > li {
+      position: relative;
+      list-style: none;
+    }
+
+    .menu > li > a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .menu > li > a:hover,
+    .menu > li:hover > a {
+      background-color: #e6f4ea;
+      color: #006400;
+    }
+
+    /* ====== Dropdown Styling ====== */
+    .dropdown {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+      min-width: 250px;
+      padding: 10px 0;
+      animation: fadeIn 0.25s ease;
+      list-style: none;
+    }
+
+    .dropdown a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 20px;
+      font-size: 14px;
+      display: block;
+      transition: all 0.2s ease;
+    }
+
+    .dropdown a:hover {
+      background-color: #e6f4ea;
+      color: #006400;
+    }
+
+    .menu li:hover > .dropdown {
+      display: flex;
+    }
+
+    /* ====== Submenu (Right Side Dropdown) ====== */
+    .dropdown li {
+      position: relative;
+      list-style: none;
+    }
+
+    .dropdown .submenu {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+      min-width: 250px;
+      padding: 10px 0;
+      animation: fadeIn 0.25s ease;
+      list-style: none;
+    }
+
+    .dropdown li:hover > .submenu {
+      display: flex;
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .dropdown {
+        position: static;
+        box-shadow: none;
+      }
+
+      .dropdown .submenu {
+        position: static;
+        box-shadow: none;
+      }
+    }
+
+    /* ====== Animation ====== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img src="https://aed.tn.gov.in/media/filer_public_thumbnails/filer_public/ea/c9/eac9c84e-a02c-4733-8a10-331dc8d1e1c3/tn_logo__eng.png__1200.0x1317.0_subsampling-2.png" alt="Tamil Nadu Logo">
+        <span>Tamil Nadu District Portal</span>
       </div>
+
+      <ul class="menu">
+        <li><a href="../district_page.html" style="margin-left: 40px;" >Home</a></li>
+
+       <li>
+          <a href="#">About District</a>
+          <ul class="dropdown">
+            <li><a href="./history.html">History</a></li>
+            <li><a href="./who_is_who.html">Who’s Who</a></li>
+            <li><a href="./collectors_lists.html">List Of Collectors</a></li>
+            <li><a href="./local_bodies.html">Local Bodies</a></li>
+            <li><a href="./Elected_Representatives.html">Elected Representatives</a></li>
+            <li><a href="./eGovernance.html">eGovernance</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Directory</a>
+          <ul class="dropdown">
+            <li><a href="../Directory/Contact_Directory.html">Contact Directory</a></li>
+            <li><a href="../Directory/Taluk_Officials_Contact.html">Taluk Officials Contact Details</a></li>
+            <li><a href="../Directory/Other_Dept_Details.html">Other Department Contact Details</a></li>
+            <li><a href="../Directory/helpline.html">Helpline</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Departments</a>
+          <ul class="dropdown">
+            <li><a href="../departments/Tribal_Welfare.html">Adi Dravidar and Tribal Welfare</a></li>
+            <li><a href="../departments/Minorities_Welfare.html">Backward Classes and Minorities Welfare</a></li>
+            <li>
+              <a href="#">Differently Abled Welfare ▸</a>
+              <ul class="dropdown submenu">
+                <li><a href="../DIFFERENTLY ABLED/Diff__Welfare_Schemes.html">Differently Abled Welfare Schemes</a></li>
+                <li><a href="../DIFFERENTLY ABLED/Acts,Rules.html">Acts, Rules, Guidelines and Government Orders</a></li>
+                <li><a href="../DIFFERENTLY ABLED/Useful_Websites.html">Useful Websites for Differently Abled</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">District Social Welfare ▸</a>
+              <ul class="dropdown submenu">
+                <li><a href="../Social_Welfare/Sexual_Harassments.html">Sexual Harassments of Women at Workplace Act</a></li>
+                <li><a href="../Social_Welfare/Notifi_for_Girl_Protection.html">Notification for Girl Child Protection Scheme Maturity</a></li>
+                <li><a href="../Social_Welfare/Social_Welfare_Schemes.html">Social Welfare Schemes</a></li>
+                <li><a href="../Social_Welfare/Details_of_Gov.html">Details of Govt & Private Working Women Hostels in Chennai</a></li>
+              </ul>
+            </li>
+            <li><a href="../departments/Dist_Industries_Centre.html">District Industries Centre</a></li>
+            <li><a href="../departments/AssDirector_of_Geo.html">Assistant Director of Geology and Mining</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Tourism</a>
+          <ul class="dropdown">
+            <li><a href="../Tourism/Places_of_Interest.html">Places of Interest</a></li>
+            <li><a href="../Tourism/Tourist_Places.html">Tourist Places</a></li>
+            <li><a href="../Tourism/Tourist_Information.html">Tourist Information</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Online Citizen Services</a>
+          <ul class="dropdown">
+            <li><a href="../Online_Citizen_Services.html/How_to_Apply_Certificate.html">How to Apply Certificate</a></li>
+            <li><a href="../Online_Citizen_Services.html/Certifi_issuing_authority.html">Certificate Issuing Authority</a></li>
+            <li><a href="../Online_Citizen_Services.html/OAP_Eligibility.html">Eligibility Criteria for Pension Schemes</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../gallery.html">Photo Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>
+
+
+
+
+      
     </header>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
-      <a href="#" class="mobile-nav-item">Home</a>
-      <a href="#" class="mobile-nav-item active">District Info</a>
-      <a href="#" class="mobile-nav-item">Tourism</a>
-      <a href="#" class="mobile-nav-item">Schemes</a>
-      <a href="#" class="mobile-nav-item">Contact</a>
-    </nav>
 
 
   <script>

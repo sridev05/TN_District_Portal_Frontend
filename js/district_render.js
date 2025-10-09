@@ -39,6 +39,7 @@ function renderDistrictList() {
   Array.from(list.querySelectorAll('.district-tab')).forEach(btn => {
     btn.onclick = () => {
       const selectedIndex = parseInt(btn.dataset.idx);
+      try { localStorage.setItem('selectedDistrict', districts[selectedIndex].name_en); } catch (_) {}
       renderDistrict(selectedIndex, uniqueDistricts);
       Array.from(list.children).forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -47,6 +48,88 @@ function renderDistrictList() {
       document.querySelector('.main-content').scrollIntoView({ behavior: 'smooth' });
     };
   });
+}
+
+function toSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+}
+
+async function loadDistrictMenu(districtName) {
+  const wrapper = document.getElementById('districtMenuTop') || document.getElementById('districtMenuContainer');
+  if (!wrapper) return;
+  
+  const folderGuessList = [
+    districtName.toLowerCase().replace(/\s+/g, ''), // e.g., chennai, tiruvallur
+    toSlug(districtName), // e.g., the-nilgiris
+  ];
+  
+  let loaded = false;
+  for (const guess of folderGuessList) {
+    const path = `../${guess}/menu.html`;
+    try {
+      const resp = await fetch(path, { cache: 'no-store' });
+      if (resp.ok) {
+        const html = await resp.text();
+        wrapper.innerHTML = html;
+        loaded = true;
+        break;
+      }
+    } catch (_) { /* ignore and try next */ }
+  }
+  
+  if (!loaded) {
+    // Fallback: embed via iframe so it always displays even when fetch is blocked (e.g., file://)
+    const slug = districtName.toLowerCase().replace(/\s+/g, '');
+    const src = `../${slug}/menu.html`;
+    wrapper.innerHTML = `<iframe class="district-menu-iframe" src="${src}" title="${districtName} Menu"></iframe>`;
+    // After iframe loads, try to force links to open in parent
+    const iframe = wrapper.querySelector('iframe');
+    if (iframe) {
+      iframe.addEventListener('load', () => {
+        try {
+          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          const as = doc.querySelectorAll('a');
+          as.forEach(a => a.setAttribute('target', '_parent'));
+        } catch (_) { /* cross-origin or file restrictions; ignore */ }
+      });
+    }
+    return;
+  }
+
+  // Rewrite links to local files where available (district-specific)
+  try {
+    const anchors = wrapper.querySelectorAll('a[href]');
+    const dn = districtName.toLowerCase();
+
+    if (dn === 'chennai') {
+      const base = '../chennai/';
+      const mapping = {
+        // Departments
+        'departments/backward-classes-and-minorities-welfare/': 'departments/Minorities_Welfare.html',
+        // Add more mappings here as you add local pages
+      };
+
+      anchors.forEach(a => {
+        const href = a.getAttribute('href') || '';
+        if (href.startsWith('https://chennai.nic.in/')) {
+          let path = href.replace('https://chennai.nic.in/', '');
+          if (mapping[path]) {
+            a.setAttribute('href', base + mapping[path]);
+            a.removeAttribute('target');
+          } else {
+            // Default: point inside ../chennai/ preserving path (may 404 if file not present)
+            a.setAttribute('href', base + path);
+            a.removeAttribute('target');
+          }
+        }
+      });
+    }
+  } catch (_) { /* non-fatal */ }
 }
 
 function renderDistrict(idx = 0, districtArray = null) {
@@ -70,6 +153,13 @@ function renderDistrict(idx = 0, districtArray = null) {
   // Main Content - Left Column
   const out = [];
   
+  // District menu section (embedded)
+  out.push(`
+    <div class="district-menu-wrapper">
+      <div id="districtMenuContainer"></div>
+    </div>
+  `);
+  
   // District Title
   out.push(`
     <h2>${d.name_en} Information</h2>
@@ -79,8 +169,8 @@ function renderDistrict(idx = 0, districtArray = null) {
   out.push(`
     <div class="collector-info">
       <div class="collector-header">
-        <img class="collector-image" src="${d.image}" alt="${d.name_en}" onerror="this.src='https://via.placeholder.com/120x120/2d5aa0/ffffff?text=${d.name_en.charAt(0)}'">
-        <div class="collector-details">
+        <img class="collector-image" src="${d.collector.image || d.image}" alt="${d.name_en}" onerror="this.src='https://via.placeholder.com/120x120/2d5aa0/ffffff?text=${d.name_en.charAt(0)}'">
+      <div class="collector-details">
           <h3>${d.collector.name}</h3>
           <p>${d.collector.designation}</p>
           <p>📞 <a href="tel:${d.collector.phone}">${d.collector.phone}</a></p>
@@ -214,7 +304,7 @@ function renderDistrict(idx = 0, districtArray = null) {
         </div>
       </div>
       
-      <div class="info-card">
+    <div class="info-card">
         <h3 class="card-title">Departments</h3>
         <div class="department-list">
           <div class="department-item">
@@ -250,22 +340,22 @@ function renderDistrict(idx = 0, districtArray = null) {
         </div>
       </div>
       <div style="overflow-x: auto;">
-        <table class="schemes-table">
-          <thead>
-            <tr>
+      <table class="schemes-table">
+        <thead>
+          <tr>
               <th>S.NO</th>
               <th>SCHEME NAME</th>
               <th>DEPARTMENT</th>
               <th>BENEFICIARIES</th>
               <th>BUDGET (₹ CRORES)</th>
               <th>STATUS</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${d.schemes.map(formatSchemeRow).join('')}
-          </tbody>
-        </table>
-      </div>
+          </tr>
+        </thead>
+        <tbody>
+          ${d.schemes.map(formatSchemeRow).join('')}
+        </tbody>
+      </table>
+    </div>
       <div style="margin-top: 20px; text-align: center;">
         <a class="view-all-btn" href="${d.url}" target="_blank" rel="noopener">
           View All Schemes & Apply Online →
@@ -331,6 +421,9 @@ function renderDistrict(idx = 0, districtArray = null) {
       }, index * 100);
     });
   }, 100);
+  
+  // Load the district-specific menu
+  loadDistrictMenu(d.name_en);
 }
 
 // Function to get district data by name
@@ -343,6 +436,20 @@ function updateDistrictContent(districtData) {
     if (!districtData) {
         console.error('District data not found');
         return;
+    }
+
+    // Ensure district menu exists and load it
+    const mainContent = document.getElementById('mainContent');
+    if (mainContent) {
+        let menuWrapper = document.getElementById('districtMenuContainer');
+        if (!menuWrapper) {
+            const holder = document.createElement('div');
+            holder.className = 'district-menu-wrapper';
+            holder.innerHTML = '<div id="districtMenuContainer"></div>';
+            mainContent.prepend(holder);
+            menuWrapper = holder.firstElementChild;
+        }
+        loadDistrictMenu(districtData.name_en);
     }
 
     // Update page title
@@ -360,7 +467,7 @@ function updateDistrictContent(districtData) {
         collectorInfo.innerHTML = `
             <div class="collector-header">
                 <img
-                    src="../image/che_dis_col.jpeg"
+                    src="${districtData.collector.image || '../image/che_dis_col.jpeg'}"
                     alt="District Collector"
                     class="collector-image"
                 />
