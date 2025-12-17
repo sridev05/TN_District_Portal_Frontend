@@ -34,8 +34,4 @@ This project is a **frontend-only** web application that modernizes the Tamil Na
 
 ---
 
-## 🧑‍💻 Developer
-
-- **Sri Dev** – Frontend Developer
-
 
