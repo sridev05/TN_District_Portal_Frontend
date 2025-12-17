@@ -8,7 +8,7 @@ This project is a **frontend-only** web application that modernizes the Tamil Na
 
 - Modern and responsive UI/UX
 - Easy navigation across pages
-- District-wise information display
+- District-wise information display 
 - Sections for:
   - Tourism
   - Schemes
