@@ -30,7 +30,8 @@ This project is a **frontend-only** web application that modernizes the Tamil Na
 
 1. Clone this repository
 2. Open the project folder
-3. Launch the project in a browser
+3. run the index.html
+4. Launch the project in a browser
 
 ---
 
